@@ -1,2 +1,3 @@
 # 500-Algoritmos
- 500 Algoritmos em Python 
+ 500 Algoritmos em Python
+- Atualizações toda semana
