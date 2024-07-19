@@ -1,15 +1,9 @@
 ## Algoritmo 001
 # Fritar Ovo
 
-fogo = False
-recomecar = False
-frigideira = False
-ovo = False
-oleo = False
-sal = False
-
 def fritar_ovo(frigideira=False, ovo=False, oleo=False, sal=False, fogo=False):
-    global recomecar
+    recomecar = False
+    #global recomecar
     while recomecar == False:
         if frigideira == False and ovo == False and oleo == False and sal == False:
             print("Pegar frigideira, ovo, óleo e sal")
