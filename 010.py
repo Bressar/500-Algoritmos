@@ -90,10 +90,10 @@ while True:
         print(" *- GANHOU! -* " * 5)
         break
      
-"""
+
 # for debug
-print(quant_missionarios_A)
-print(quant_missionarios_B)
-print(quant_canibais_A)
-print(quant_canibais_B)
- """
+# print(quant_missionarios_A)
+# print(quant_missionarios_B)
+# print(quant_canibais_A)
+# print(quant_canibais_B)
+
