@@ -45,10 +45,13 @@ while True:
             numero_lista = []
             for char in numero_string:
                 numero_lista.append(int(char))
-            numero_lista.sort(reverse=True)
+            numero_lista.reverse()
+            #numero_lista.sort(reverse=True) # outra possibilidade
             print('Número invertido: ', end='')
-            for item in range(len(numero_lista)):
-                print(numero_lista[item], end='')
+            for numero in numero_lista:
+                print(numero, end='')
+            # for item in range(len(numero_lista)): # versão complicando tudo...
+            #     print(numero_lista[item], end='')
             break
     except:
         print('Valor inválido, tente novamente!')
