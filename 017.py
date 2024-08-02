@@ -1,5 +1,5 @@
 # Algoritmo 017
-# Palindromos
+# Palíndromos
 
 # modelo de lista invertida -> text[::-1]
 
