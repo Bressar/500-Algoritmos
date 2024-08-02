@@ -19,6 +19,6 @@
 - 015 -> Processador de números
 - 016 -> Validador de IBAN
 - 017 -> Palíndromos
-- 018 ->
-- 019 ->
+- 018 -> Anagramas
+- 019 -> Dígito da Vida
 - 020 ->
