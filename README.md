@@ -21,4 +21,7 @@
 - 017 -> Palíndromos
 - 018 -> Anagramas
 - 019 -> Dígito da Vida
-- 020 ->
+- 020 -> Encontre a palavra
+- 021 -> Sudoku
+- 022 ->...
+  
