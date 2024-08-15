@@ -23,6 +23,9 @@
 - 019 -> Dígito da Vida
 - 020 -> Encontre a palavra
 - 021 -> Sudoku
-- 022 ->...
-- 022 ->...
+- 022 -> Timer
+- 023 -> Dias da Semana
+- 024 -> Pontos em um Plano ( coordenadas cartesianas )
+- 025 -> 
+- 026 -> 
   
