@@ -14,17 +14,22 @@ Crianças abaixo de 12 anos, a dosagem é a seguinte:
     24.1 a 30 kg -> 500 mg
     30 a 59.99 kg -> 750 mg 
 """
+# Versão usando Classes -> POO
+
 class Paciente:
     gotas = int(500 / 20)
     dosagem_gotas = 0
     
-    def __init__(self, nome=None, idade=None, peso=None):
+    
+    def __init__(self, nome="", idade=0, peso=0):
         self.__nome = nome
         self.__idade = idade
         self.__peso = peso
     
+    
     def __str__(self):
         return f"Nome: {self.__nome}, Idade: {self.__idade}, Peso: {self.__peso} kg"
+    
     
     def print_receita(self):
         print("--" * 30)
@@ -34,6 +39,7 @@ class Paciente:
             f"Idade: {self.__idade}\n"
             f"Deve tomar {self.dosagem_gotas} gotas a cada dose da medicação.")
         print("--" * 30)
+ 
     
     def dosagem(self):
         if self.__peso < 5:
@@ -58,23 +64,78 @@ class Paciente:
             self.print_receita()
         else:
             pass
-
-
+ 
+        
 paciente1 = Paciente("Oldaque", 103, 70)
-paciente2 = Paciente("Jurema", 99, 42)
-paciente3 = Paciente("Zulmira", 11, 40)
-paciente4 = Paciente("Joseverson", 9, 25)
-paciente5 = Paciente("Creuza", 8, 23)
-paciente6 = Paciente("Biafra", 6, 15)
-paciente7 = Paciente("Esqueletinho", 5, 8)
-paciente8 = Paciente("Bebê diabo", 1, 4)
-
+# paciente2 = Paciente("Jurema", 99, 42)
+# paciente3 = Paciente("Zulmira", 11, 40)
+# paciente4 = Paciente("Joseverson", 9, 25)
+# paciente5 = Paciente("Creuza", 8, 23)
+# paciente6 = Paciente("Biafra", 6, 15)
+# paciente7 = Paciente("Esqueletinho", 5, 8)
+# paciente8 = Paciente("Bebê diabo", 1, 4)
 
 paciente1.dosagem()
-paciente2.dosagem()
-paciente3.dosagem()
-paciente4.dosagem()
-paciente5.dosagem()
-paciente6.dosagem()
-paciente7.dosagem()
-paciente8.dosagem()
+# paciente2.dosagem()
+# paciente3.dosagem()
+# paciente4.dosagem()
+# paciente5.dosagem()
+# paciente6.dosagem()
+# paciente7.dosagem()
+# paciente8.dosagem()
+
+
+# Versão em programação Estruturada 
+ 
+# vars
+gotas = int(500 / 20) # 25 gotas por ml
+dosagem_gotas = 0
+idade, peso = 0, 0, 
+nome = " "
+
+
+def print_receita():
+    print("--" * 30)
+    print(f"RECEITA:\n"
+        f"Paciente: {nome}\n"
+        f"Peso: {peso} Kg\n"
+        f"Idade: {idade}\n"
+        f"Deve tomar {dosagem_gotas} gotas a cada dose da medicação.")
+    print("--" * 30)
+  
+    
+def dosagem():
+    global dosagem_gotas  # Global para modificar a variável global
+    if peso < 5:
+        print("Não pode tomar a medicação, abaixo do peso!\n Consulte seu Médico.")
+    elif idade >= 12 and peso >= 60:
+        dosagem_gotas = int(1000 / gotas)  # acima de 60 kg
+        print_receita()
+    elif idade >= 12 and self.__peso < 60:
+        dosagem_gotas = int(875 / gotas)  # abaixo de 60 kg
+        print_receita()
+    elif idade < 12:  # Lógica para crianças abaixo de 12 anos
+        if 5 <= peso <= 9:
+            dosagem_gotas = int(125 / gotas)
+        elif 9.1 <= self.__peso <= 16:
+            dosagem_gotas = int(250 / gotas)
+        elif 16.1 <= self.__peso <= 24:
+            dosagem_gotas = int(375 / gotas)
+        elif 24.1 <= self.__peso <= 30:
+            dosagem_gotas = int(500 / gotas)
+        elif 30 < self.__peso <= 59.99:
+            dosagem_gotas = int(750 / gotas)
+        print_receita()  
+
+# Loop para entrada do usuário       
+while True:
+    try:
+        nome = str(input("Nome: ")).strip()
+        idade = int(input("Idade: "))
+        peso = float(input("Peso: "))
+        break
+    except ValueError:
+        print("Valores inválidos, escreva novamente!")
+        
+# Chama a função para calcular e exibir a dosagem
+dosagem() 

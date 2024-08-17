@@ -26,6 +26,6 @@
 - 022 -> Timer
 - 023 -> Dias da Semana
 - 024 -> Pontos em um Plano ( coordenadas cartesianas )
-- 025 -> 
+- 025 -> Dosagem de remédio
 - 026 -> 
   
