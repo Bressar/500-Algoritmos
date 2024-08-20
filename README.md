@@ -1,6 +1,6 @@
 # 500-Algoritmos
- 500 Algoritmos em Python
-- Atualizações toda semana
+**500 Algoritmos em Python**
+*Atualizações toda semana*
 
 - 001 -> Fritar Ovo
 - 002 -> Mascar chiclete
@@ -27,5 +27,7 @@
 - 023 -> Dias da Semana
 - 024 -> Pontos em um Plano ( coordenadas cartesianas )
 - 025 -> Dosagem de remédio
-- 026 -> 
+- 026 -> Gerador de Fibonacci
+- 027 -> 
+- 028 ->
   
