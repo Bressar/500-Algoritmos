@@ -28,6 +28,6 @@
 - 024 -> Pontos em um Plano ( coordenadas cartesianas )
 - 025 -> Dosagem de remédio
 - 026 -> Gerador de Fibonacci
-- 027 -> 
+- 027 -> Histograma de Frequência de Caracteres
 - 028 ->
   
