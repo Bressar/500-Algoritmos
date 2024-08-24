@@ -29,5 +29,7 @@
 - 025 -> Dosagem de remédio
 - 026 -> Gerador de Fibonacci
 - 027 -> Histograma de Frequência de Caracteres
-- 028 ->
+- 028 -> Caixa de Eletrônico - Multibanco
+- 029 -> 
+- 030 -> 
   
