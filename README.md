@@ -30,6 +30,11 @@
 - 026 -> Gerador de Fibonacci
 - 027 -> Histograma de Frequência de Caracteres
 - 028 -> Caixa de Eletrônico - Multibanco
-- 029 -> 
-- 030 -> 
+- 029 -> Bubble Sort - Algoritmo de ordenação de troca
+- 030 ->
+- 031 -> 
+- 032 -> 
+- 033 -> 
+- 034 -> 
+- 035 ->  
   
