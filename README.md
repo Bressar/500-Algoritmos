@@ -31,7 +31,7 @@
 - 027 -> Histograma de Frequência de Caracteres
 - 028 -> Caixa de Eletrônico - Multibanco
 - 029 -> Bubble Sort - Algoritmo de ordenação de troca
-- 030 ->
+- 030 -> Merge Sort - Algoritmo de ordenação por intercalação 
 - 031 -> 
 - 032 -> 
 - 033 -> 
