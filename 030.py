@@ -1,5 +1,6 @@
 # Algoritmo 030
-# Merge Sort - Algoritmo de ordenação por intercalação 
+# Merge Sort - Algoritmo de ordenação por intercalação
+# complexidade 𝑂(𝑛. 𝑙𝑜𝑔𝑛) 
 
 vetor = []
 

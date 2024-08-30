@@ -1,6 +1,8 @@
 # Algoritmo 029
 # Bubble Sort - Algoritmo de ordenação de troca - exemplo - Estrutura de dados
-""" O Bubble Sort é um algoritmo de ordenação que funciona comparando pares de elementos consecutivos e trocando-os se estiverem fora de ordem. Esse processo é repetido até que a lista esteja ordenada. """
+""" O Bubble Sort é um algoritmo de ordenação que funciona comparando pares de elementos consecutivos e trocando-os se estiverem fora de ordem. Esse processo é repetido até que a lista esteja ordenada. 
+complexidade 𝑂(𝑛²)
+"""
 
 aux = 0
 vetor= []

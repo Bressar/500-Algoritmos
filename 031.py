@@ -6,7 +6,9 @@ compara todos os valores que estão à esquerda dele, verificado se eles são
 menores que o pivô. Em seguida, são comparados todos os valores que estão à
 direita do pivô, verificando se eles são maiores que o valor de referência do pivô.
 Sempre que um valor maior que o pivô é encontrado do lado esquerdo e/ou um
-valor menor é achado do lado direito, ambos trocam de posição (swap). """
+valor menor é achado do lado direito, ambos trocam de posição (swap). 
+complexidade 𝑂(𝑛²)
+"""
 
 
 vetor = [6, 1, 8, 2, 7]
