@@ -10,7 +10,7 @@ for i in range(0, tamanho_vetor):
     numero = int(input('Digite um número: '))
     vetor.append(numero)
 
-def intercala(x, inicio, fim, meio):  
+def intercala(x, inicio, fim, meio):  # x receberá a lista 'vetor' como argumento
     inicio_vetor1 = inicio
     inicio_vetor2 = meio + 1
     poslivre = inicio  

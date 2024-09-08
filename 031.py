@@ -10,48 +10,47 @@ valor menor é achado do lado direito, ambos trocam de posição (swap).
 complexidade 𝑂(𝑛²)
 """
 
-
 vetor = [6, 1, 8, 2, 7]
 
-def troca(x, i, j):
+def troca(vetor, i, j):
     # Troca os elementos de posição i e j
-    aux = x[i]
-    x[i] = x[j]
-    x[j] = aux
+    aux = vetor[i]
+    vetor[i] = vetor[j]
+    vetor[j] = aux
 
-def particao(x, inicio, fim):
- # Escolhe o elemento do meio como pivô
+def particao(vetor, inicio, fim):
+    # Escolhe o elemento do meio como pivô
     meio = (inicio + fim) // 2
-    pivo = x[meio]
+    pivo = vetor[meio]
     # Coloca o pivô na posição inicial temporariamente
-    troca(x, inicio, meio)
+    troca(vetor, inicio, meio)
     i = inicio + 1
     j = fim
 
     while True:
         # Encontra o primeiro elemento à direita que é menor ou igual ao pivô
-        while i <= j and x[i] <= pivo:
+        while i <= j and vetor[i] <= pivo:
             i += 1
         # Encontra o primeiro elemento à esquerda que é maior ou igual ao pivô
-        while i <= j and x[j] >= pivo:
+        while i <= j and vetor[j] >= pivo:
             j -= 1
         if i <= j:
             # Troca elementos incoerentes
-            troca(x, i, j)
+            troca(vetor, i, j)
         else:
             # Coloca o pivô na posição correta
-            troca(x, inicio, j)
+            troca(vetor, inicio, j)
             return j
 
 # Quick sort crescente
-def quick_sort(x, inicio=0, fim=None):
+def quick_sort(vetor, inicio=0, fim=None):
     if fim is None:
-        fim = len(x) - 1
+        fim = len(vetor) - 1
 
     if inicio < fim:
-        div = particao(x, inicio, fim)  # Particiona o vetor
-        quick_sort(x, inicio, div - 1)  # Ordena a primeira metade
-        quick_sort(x, div + 1, fim)  # Ordena a segunda metade
+        div = particao(vetor, inicio, fim)  # Particiona o vetor
+        quick_sort(vetor, inicio, div - 1)  # Ordena a primeira metade
+        quick_sort(vetor, div + 1, fim)  # Ordena a segunda metade
 
 # Ordena o vetor
 quick_sort(vetor)
