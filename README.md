@@ -34,7 +34,7 @@
 - 030 -> Merge Sort - Algoritmo de ordenação por intercalação 
 - 031 -> Quick Sort - Algoritmo de ordenação rápida
 - 032 -> Algoritmos de busca (sequêncial[ordenada e não ordenada], busca binária)
-- 033 -> 
+- 033 -> Lista encadeada - inserção de dados
 - 034 -> 
 - 035 ->  
 - 036 ->  
