@@ -35,7 +35,7 @@
 - 031 -> Quick Sort - Algoritmo de ordenação rápida
 - 032 -> Algoritmos de busca (sequêncial[ordenada e não ordenada], busca binária)
 - 033 -> Lista encadeada - inserção de dados
-- 034 -> 
+- 034 -> Árvore Binária
 - 035 ->  
 - 036 ->  
 - 037 ->  
