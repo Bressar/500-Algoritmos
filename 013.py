@@ -15,7 +15,7 @@ while True:
             print(f'Número invertido: {numero_invertido}')
             #print(f'Número invertido: {unidade}{dezena}{centena}') # versão direta
             break
-    except:
+    except ValueError:
         print('Valor inválido, tente novamente!')
 
 
