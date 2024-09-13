@@ -37,8 +37,16 @@
 - 033 -> Lista encadeada - inserção de dados
 - 034 -> Árvore Binária
 - 035 -> Consumo de energia / Kw
-- 036 ->  
-- 037 ->  
+- 036 -> Cálculo de salário
+- 037 -> Conversor de temperatura Farenheit/Celsius
 - 038 ->  
 - 039 ->  
+- 040 -> 
+- 041 -> 
+- 042 -> 
+- 043 -> 
+- 044 -> 
+- 045 -> 
+- 046 -> 
+- 047 -> 
   
