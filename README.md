@@ -40,7 +40,7 @@
 - 036 -> Cálculo de salário
 - 037 -> Conversor de temperatura Farenheit/Celsius
 - 038 -> Cáculo de volume - lata de óleo
-- 039 ->  
+- 039 -> Consumo de combustível 
 - 040 -> 
 - 041 -> 
 - 042 -> 
