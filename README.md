@@ -43,7 +43,7 @@
 - 039 -> Consumo de combustível 
 - 040 -> Prestação em atraso
 - 041 -> GRAFOS - caminho mais curto / "Dijkstra"
-- 042 -> 
+- 042 -> Valores Trocados
 - 043 -> 
 - 044 -> 
 - 045 -> 
