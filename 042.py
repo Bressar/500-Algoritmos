@@ -1,5 +1,5 @@
 # Algoritmo 42
-# Valores Trocados, a -> b,  b -> a
+# Troca de Valores / auxiliar, a -> b,  b -> a
 
 valor_1 = input('Digite o 1° valor: ')
 valor_2 = input('Digite o 2° valor: ')
