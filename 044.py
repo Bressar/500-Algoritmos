@@ -1,6 +1,17 @@
 # Algoritmo 44
 # Fatorial
 
+
+def factorial(N):
+    result = 1
+    for i in range(2, N + 1):
+        result *= i
+    return result
+
+print(factorial(5))  # Output: 120
+print(factorial(0))  # Output: 1
+
+
 # Usando while
 
 numero = int(input("Insira um número para saber o seu fatorial: "))
