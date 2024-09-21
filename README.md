@@ -44,9 +44,9 @@
 - 040 -> Prestação em atraso
 - 041 -> GRAFOS - caminho mais curto / "Dijkstra"
 - 042 -> Troca de Valores / auxiliar
-- 043 -> 
-- 044 -> 
-- 045 -> 
+- 043 -> Ler um valor de hora e informar quantos minutos se passaram desde o início do dia
+- 044 -> Cálculo de Fatorial
+- 045 -> Cálculo de IMC
 - 046 -> 
 - 047 -> 
   
