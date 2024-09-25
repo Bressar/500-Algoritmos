@@ -47,6 +47,9 @@
 - 043 -> Ler um valor de hora e informar quantos minutos se passaram desde o início do dia
 - 044 -> Cálculo de Fatorial
 - 045 -> Cálculo de IMC
-- 046 -> 
-- 047 -> 
-  
+- 046 -> Taxa de juros / rendimento
+- 047 -> Entrar com um número real e imprimir: parte inteira, parte fracionário, número arredondado
+- 048 ->
+- 049 ->
+- 050 ->
+
