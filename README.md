@@ -49,7 +49,17 @@
 - 045 -> Cálculo de IMC
 - 046 -> Taxa de juros / rendimento
 - 047 -> Entrar com um número real e imprimir: parte inteira, parte fracionário, número arredondado
-- 048 ->
-- 049 ->
-- 050 ->
+- 048 -> Cálculo em salários mínimos
+- 049 -> Número sucessor, !Sem usar estruturas de repetição!
+- 050 -> Rendimento de poupança programada
+- 051 -> Locadora de Vídeos - !Isso é antigo...rs!
+- 052 -> 
+- 053 -> 
+- 054 -> 
+- 055 -> 
+- 056 -> 
+- 057 -> 
+- 058 -> 
+- 059 -> 
+- 060 -> 
 
