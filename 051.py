@@ -24,60 +24,81 @@ class Locadora:
         self.__quantidade = quantidade
       
         
-    def linha(self):
-        print('--' * 25) 
+    def linha(self, valor):
+        print('--' * valor) 
      
         
     def faturamento_anual(self):
         if self.__quantidade is not None and self.__valor_aluguel is not None:
             fatura_anual = (self.__quantidade / 3) * self.__valor_aluguel * 12
-            self.linha()
             print(f'Faturamento Anual: R$ {fatura_anual:.2f}')
-            self.linha()
         else:
-            print("Por favor, defina 'quantidade' e 'valor_aluguel' antes de calcular o faturamento.")
+            print("Erro: Faltam informações para calcular o faturamento anual.")
      
             
     def multas_mensais(self):
         if self.__quantidade is not None and self.__valor_aluguel is not None and self.__multas is not None:
-            multas = self.__valor_aluguel * 0.1 * ((self.__quantidade / 3) / 10)
-            self.linha()
+            multas = self.__valor_aluguel * 0.1 * (self.__quantidade / 10)
             print(f'Multas Mensais: R$ {multas:.2f}')
-            self.linha()
         else:
-            print("Por favor, defina 'quantidade', 'valor_aluguel' e 'quantidade de multas'.\nAntes de calcular o faturamento.")
+            print("Erro: Faltam informações para calcular o valor das multas mensais.")
       
             
     def quantidade_fitas(self):
         if self.__quantidade is not None and self.__valor_aluguel is not None and self.__multas is not None:
-            quantidade_final = int(self.__quantidade * (self.__quantidade * 0.02) + (self.__quantidade / 10))
-            self.linha()
+            quantidade_final = int(self.__quantidade - (self.__quantidade * 0.02) + (self.__quantidade / 10))
             print(f"Quantidade de fitas em estoque no final do ano: {quantidade_final}")
-            self.linha()
         else:
-            print("Por favor, defina 'quantidade', 'valor_aluguel' e 'quantidade de multas'.\nAntes de calcular o faturamento.")
+            print("Erro: Faltam informações para calcular a quantidade final de fitas.")
 
                        
-    def relatorio_ano_locadora(self, ano):
-        ano_indicado = int(input('Digite o ano para o registro: '))
-        quantidade = int(input('Digite a quantidade de fitas: '))
-        valor_aluguel = float(input('Digite o valor do Aluguel: '))
-        multas = int(input("Quantidade de multas mensais: ") )
+    def relatorio_ano_locadora(self):
+        while True:
+            try:
+                ano_indicado = input('Digite o ano para o registro: ')
+                if len(ano_indicado) != 4 or not ano_indicado.isdigit():
+                    raise ValueError("O ano indicado deve ter exatamente 4 dígitos.")
+                ano_indicado = int(ano_indicado)
+                break
+            except ValueError as e:
+                print(f"ERRO! {e}. Digite novamente")
+                self.linha(35)       
+        while True:
+            try:
+                quantidade = int(input('Digite a quantidade de fitas: '))
+                break
+            except ValueError as e:
+                print(f"ERRO! {e}. Digite novamente")
+                self.linha(35)       
+        while True: 
+            try: 
+                valor_aluguel = float(input('Digite o valor do Aluguel: '))
+                break
+            except ValueError as e:
+                print(f"ERRO! {e}. Digite novamente")
+                self.linha(35) 
+        while True:
+            try:
+                multas = int(input("Quantidade de multas mensais: ") )
+                break
+            except ValueError as e:
+                print(f"ERRO! {e}. Digite novamente")
+                self.linha(35)
+        
         self.__valor_aluguel = valor_aluguel
         self.__multas = multas
         self.__quantidade = quantidade
-        ano = Locadora(valor_aluguel=self.__valor_aluguel, multas=self.__multas, quantidade=self.__quantidade)
         
-        self.linha()
-        print(f'Relatório do Ano de {ano_indicado}')
-        
-        return ano.faturamento_anual(), ano.multas_mensais(), ano.quantidade_fitas()
+        self.linha(25)
+        self.linha(25)
+        print(f'RELATÓRIO DO ANO DE {ano_indicado}')
+        self.linha(25)
+        self.faturamento_anual()
+        self.multas_mensais()
+        self.quantidade_fitas()
+        self.linha(25)
                 
-           
-ano_0000 = Locadora(valor_aluguel=0, multas=0, quantidade=0)   
-ano_0000.relatorio_ano_locadora(ano=1998)
 
-# Debug
-# ano_1997.faturamento_anual()
-# ano_1997.multas_mensais()
-# ano_1997.quantidade_fitas()
+# Dessa forma o user entra com os dados pelo terminal, !depois melhoro o código e adiciono um banco de dados!        
+ano_0000 = Locadora()   
+ano_0000.relatorio_ano_locadora()
