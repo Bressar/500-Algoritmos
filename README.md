@@ -53,7 +53,7 @@
 - 049 -> Número sucessor, !Sem usar estruturas de repetição!
 - 050 -> Rendimento de poupança programada
 - 051 -> Locadora de Vídeos - !Isso é antigo...rs!
-- 052 -> 
+- 052 -> Sistema de Estacionamento(veículos)
 - 053 -> 
 - 054 -> 
 - 055 -> 
