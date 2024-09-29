@@ -1,16 +1,39 @@
 # Algoritmo 52
 # Sistema de Estacionamento(veículos)
 
+""" Contexto
+Construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+
+Proposta
+Construir uma classe chamada "Estacionamento".
+
+A classe contém três variáveis, sendo:
+precoInicial: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+precoPorHora: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+veiculos: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+
+A classe contém três métodos, sendo:
+AdicionarVeiculo: Método responsável por receber uma placa digitada pelo usuário e guardar na variável veiculos.
+RemoverVeiculo: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: precoInicial * precoPorHora, exibindo para o usuário.
+ListarVeiculos: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+
+Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
+Cadastrar veículo
+Remover veículo
+Listar veículos
+Encerrar
+ """
+
 class Estacionamento:
+    
+    total_a_pagar = 0  
     
     def __init__(self, preco_inicial=1.0, preco_hora=1.0, lista_veiculos=[]):
         self.__preco_inicial = preco_inicial
         self.__preco_hora = preco_hora
         self.__lista_veiculos = lista_veiculos
         
-    total_a_pagar = 0    
-    
-    
+         
     def linha(self, padrao='--', valor=0):
         print(padrao * valor)
     
@@ -58,11 +81,6 @@ class Estacionamento:
         
     def remover_veiculo(self):
         remover_veiculo = str(input("Digite a placa para remover o veículo:\n")).strip().upper()
-        
-        #for debug .- esse trecho tá bugando!!!
-        # print(f"Placa digitada: {remover_veiculo}")
-        # print(f"Lista de veículos: {self.__lista_veiculos}")
-     
         if remover_veiculo not in self.__lista_veiculos:
             print('Veículo não encontrado!')
         else:
@@ -70,9 +88,8 @@ class Estacionamento:
             print('Veículo Removido!')
             self.linha('--', 10)
             self.valores_entrada()    
-        #return self.__lista_veiculos
-        
-        
+
+           
     def listar_veiculos(self):
         if len(self.__lista_veiculos) == 0:
             print('Não há veículos listados')
@@ -122,12 +139,13 @@ class Estacionamento:
 
 
 # implementação     
-parking = Estacionamento(preco_inicial=2, preco_hora=1.5, lista_veiculos=[])  
+parking = Estacionamento(preco_inicial=0, preco_hora=1.5, lista_veiculos=[])  
 parking.menu_opcoes()
 
 
+# Debugs
 #parking2 = Estacionamento(preco_inicial=2, preco_hora=1.5, lista_veiculos=['ex-100', 'ex-300'])  
-# parking1.adicionar_veiculo()
-# parking1.remover_veiculo()
+#parking1.adicionar_veiculo()
+#parking1.remover_veiculo()
 #parking2.listar_veiculos()
 #parking1.valores_entrada()
