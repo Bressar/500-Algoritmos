@@ -54,10 +54,10 @@
 - 050 -> Rendimento de poupança programada
 - 051 -> Locadora de Vídeos - !Isso é antigo...rs!
 - 052 -> Sistema de Estacionamento(veículos)
-- 053 -> 
-- 054 -> 
-- 055 -> 
-- 056 -> 
+- 053 -> Número: inverso e absoluto
+- 054 -> Número: positivo, negativo, nulo
+- 055 -> Qual a capital do Brasil?
+- 056 -> Calculadora
 - 057 -> 
 - 058 -> 
 - 059 -> 
