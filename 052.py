@@ -72,13 +72,19 @@ class Estacionamento:
 
                    
     def adicionar_veiculo(self):
-        # Falta fazer uma verificação para a inserção de um valor válido para uma placa de carro
-        placa_veiculo = str(input("Digite a placa do veículo para estacionar: \n")).strip().upper()
-        self.__lista_veiculos.append(placa_veiculo)
-        print('-> Veículo cadastrado')
-        self.linha('---', 10)
+        while True:
+            placa_veiculo = str(input("Digite a placa do veículo para estacionar,\nusando a seguinte formatação [XXX1111], 3 letras e 4 números: \n")).strip().upper()          
+            # Verificação da placa no formato correto: 3 letras e 4 números
+            if len(placa_veiculo) == 7 and placa_veiculo[:3].isalpha() and placa_veiculo[3:].isdigit():
+                self.__lista_veiculos.append(placa_veiculo)
+                print('-> Veículo cadastrado')
+                self.linha('---', 10)
+                break
+            else:
+                print("Formato de placa inválido! A placa deve ter 3 letras seguidas de 4 números.")
+                self.linha('---', 10)                 
 
-        
+    
     def remover_veiculo(self):
         remover_veiculo = str(input("Digite a placa para remover o veículo:\n")).strip().upper()
         if remover_veiculo not in self.__lista_veiculos:
