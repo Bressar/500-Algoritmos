@@ -58,7 +58,7 @@
 - 054 -> Número: positivo, negativo, nulo
 - 055 -> Qual a capital do Brasil?
 - 056 -> Calculadora
-- 057 -> 
+- 057 -> Calculo de peso em cada Planeta
 - 058 -> 
 - 059 -> 
 - 060 -> 
