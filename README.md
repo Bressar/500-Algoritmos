@@ -58,8 +58,15 @@
 - 054 -> Número: positivo, negativo, nulo
 - 055 -> Qual a capital do Brasil?
 - 056 -> Calculadora Básica
-- 057 -> Calculo de peso em cada Planeta
-- 058 -> 
-- 059 -> 
+- 057 -> Cálculo de peso em cada Planeta
+- 058 -> Cálculo de Análise de Empréstimo
+- 059 -> Cálculo de idade, presente, passada e futura
 - 060 -> 
+- 061 -> 
+- 062 -> 
+- 063 -> 
+- 064 -> 
+- 065 -> 
+- 066 -> 
+- 067 -> 
 
