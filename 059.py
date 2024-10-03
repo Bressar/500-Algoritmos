@@ -1,8 +1,11 @@
 # Algoritmo 059
 # Cálculo de idade, atual e em uma data aleatória
 
-
-from datetime import datetime, date
+2
+3
+from datetime import datetime
+from dateutil.relativedelta import relativedelta  # Importar o relativedelta para um cálculo preciso
+# pip install python-dateutil
 
 
 data_atual = datetime.today() # Obtendo a data atual
@@ -73,7 +76,7 @@ def definir_data(titulo=""):
     return data              
 
 
-#print(definir_data("Insira sua data de nascimento: "))
+# Implementação 
 while True:
     print('***' * 17)
     print("CALCULADORA DE IDADE".center(50))
@@ -83,14 +86,15 @@ while True:
 
     if escolha in "aA":
         data_nascimento = definir_data("Insira sua data de nascimento: ")
-        diferenca = data_atual - data_nascimento # Calculando a diferença entre as datas
-        # Convertendo a diferença para dias totais e separando anos, meses, dias e horas
-        anos = diferenca.days // 365
-        meses = (diferenca.days % 365) // 30
-        dias = (diferenca.days % 365) % 30
-        horas = diferenca.seconds // 3600
+        diferenca = relativedelta(data_atual, data_nascimento) #Usando relativedelta para diferença precisa      
+        # Se fosse o Cálculo manual:
+        # diferenca = data_atual - data_nascimento # Calculando a diferença entre as datas
+        # anos = diferenca.days // 365
+        # meses = (diferenca.days % 365) // 30
+        # dias = (diferenca.days % 365) % 30
+        # horas = diferenca.seconds // 3600       
         linha()
-        print(f'Sua idade é de:\n- {anos} anos,\n- {meses} mese(s),\n- {dias} dia(s) \n- {horas} hora(s)')
+        print(f'Sua idade é de:\n- {diferenca.years} anos,\n- {diferenca.months} mese(s),\n- {diferenca.days} dia(s)')
         linha()   
             
     elif escolha in "xX":
@@ -98,15 +102,11 @@ while True:
         while True:
             data_aleatoria = definir_data("Insira uma data aleatória: ")
             if data_aleatoria < data_nascimento:
-                print("ERRO!\nData escolhida é anterior a data de nascimento. ")
+                print("ERRO!\nData escolhida é anterior à data de nascimento. ")
             else:
-                diferenca = data_aleatoria - data_nascimento # Calculando a diferença entre as datas
-                anos = diferenca.days // 365
-                meses = (diferenca.days % 365) // 30
-                dias = (diferenca.days % 365) % 30
-                horas = diferenca.seconds // 3600
+                diferenca = relativedelta(data_aleatoria, data_nascimento) # Usando relativedelta
                 linha()
-                print(f'Nessa data sua idade correspondia a:\n- {anos} anos,\n- {meses} mese(s),\n- {dias} dia(s) \n- {horas} hora(s)')
+                print(f'Nessa data sua idade correspondia a:\n- {diferenca.years} anos,\n- {diferenca.months} mese(s),\n- {diferenca.days} dia(s)')
                 linha()
                 break   
 
