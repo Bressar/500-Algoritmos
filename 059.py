@@ -1,5 +1,5 @@
 # Algoritmo 059
-# Cálculo de idade, presente, passada e futura
+# Cálculo de idade, atual e em uma data aleatória
 
 
 from datetime import datetime, date

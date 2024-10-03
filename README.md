@@ -60,7 +60,7 @@
 - 056 -> Calculadora Básica
 - 057 -> Cálculo de peso em cada Planeta
 - 058 -> Cálculo de Análise de Empréstimo
-- 059 -> Cálculo de idade, presente, passada e futura
+- 059 -> Cálculo de idade, atual e em uma data aleatória
 - 060 -> 
 - 061 -> 
 - 062 -> 
