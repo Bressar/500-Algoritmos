@@ -1,8 +1,6 @@
 # Algoritmo 059
 # Cálculo de idade, atual e em uma data aleatória
 
-2
-3
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Importar o relativedelta para um cálculo preciso
 # pip install python-dateutil
@@ -65,14 +63,14 @@ def definir_data(titulo=""):
                     print("ERRO!\nFevereiro só tem 28 dias em anos não bissextos.")
                     linha()
                     continue        
-# Se passou por todas as validações, o dia é válido    
+        # Se passou por todas as validações, o dia é válido    
             break
         
         except ValueError:
             print("Digite um dia válido.")
             linha()
     
-    data = datetime(year=year, month=month, day=day) #objeto datetime para a data de nascimento 
+    data = datetime(year=year, month=month, day=day) #objeto datetime para a data definida 
     return data              
 
 

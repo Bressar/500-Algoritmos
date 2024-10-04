@@ -1,7 +1,18 @@
+
+
+print(min(max(False, -3, -4), 2,7))
+
+
+
+
+
+
+
+
 # Algoritmo 059
 # Cálculo de idade, atual e em uma data aleatória
 
-
+""" 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
@@ -113,7 +124,7 @@ while True:
     else:
         print("Encerrando o programa...\nAdeus Velinho(a)!!!")
         linha()
-        break
+        break """
 
 
 
