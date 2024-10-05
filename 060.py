@@ -50,13 +50,19 @@ while True:
     sair = input("Para continuar pressione qualquer tecla.\nPara sair pressione [S]\n").upper().strip()
     if sair == "S":
         break  
-    
-print("Lista de aprovadas")
+
+print("\n","**" * 20, "\n")
+   
+print('--' * 10)
+print("APROVADOS")
 print('--' * 10)
 for i in pessoas_aceitas:
-    print(f"- {i}")  
+    print(f"- {i}") 
+    
+print("\n","**" * 20, "\n")
+
+print("REPROVADOS")
 print('--' * 10)
-print("Lista de reprovados")
 for i in pessoas_recusadas:
     print(f"- {i}")
 print('--' * 10)    

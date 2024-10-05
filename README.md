@@ -61,7 +61,7 @@
 - 057 -> Cálculo de peso em cada Planeta
 - 058 -> Cálculo de Análise de Empréstimo
 - 059 -> Cálculo de idade, atual e em uma data aleatória
-- 060 -> 
+- 060 -> Filtrando pessoas por idade e sexo
 - 061 -> 
 - 062 -> 
 - 063 -> 
