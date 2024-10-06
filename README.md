@@ -62,7 +62,7 @@
 - 058 -> Cálculo de Análise de Empréstimo
 - 059 -> Cálculo de idade, atual e em uma data aleatória
 - 060 -> Filtrando pessoas por idade e sexo
-- 061 -> 
+- 061 -> Encontrar o Gentílico
 - 062 -> 
 - 063 -> 
 - 064 -> 
