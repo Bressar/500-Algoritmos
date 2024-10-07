@@ -53,7 +53,7 @@
 - 049 -> Número sucessor, !Sem usar estruturas de repetição!
 - 050 -> Rendimento de poupança programada
 - 051 -> Locadora de Vídeos - !Isso é antigo...!
-- 052 -> Sistema de Estacionamento(veículos)
+- 052 -> Sistema de Estacionamento(veículos), também fiz uma versão usando C#
 - 053 -> Número: inverso e absoluto
 - 054 -> Número: positivo, negativo, nulo
 - 055 -> Qual a capital do Brasil?
