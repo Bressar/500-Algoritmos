@@ -1,4 +1,4 @@
-// Algoritmo 052
+// Versão do Bressar à partir de um código que fiz em Python(só removi o "flask" e deixei a lógica)
 // Sistema de Estacionamento(veículos)
 // Versão feita em C#
 
