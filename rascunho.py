@@ -1,6 +1,40 @@
+import sqlite3
+
+# Criando o database e atabela diretamentye no python:
+# nome do banco de dados: estudantes.db
+# -> nome da tabela estudantes:
+# colunas da tabela id(primary key), nome, nota1, nota2, nota3, nota4
+
+def criar_banco_de_dados():
+    # conectar ao banco de dados ou criar se não existir
+    conn = sqlite3.connect("database/estudantes.db")
+    cursor = conn.cursor()
+    
+    # Criação da tabela, caso não exista
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS estudante
+    (
+        id TEXT PRIMARY KEY,
+        nome TEXT NOT NULL,
+        nota1 REAL,
+        nota2 REAL,
+        nota3 REAL,
+        nota4 REAL
+    )
+    """)
+
+    # confirma criação de tabela
+    conn.commit()
+    conn.close()
+
+# executando a função pra criar o banco de dados:
+criar_banco_de_dados()
+print("Banco de dos criado com sucesso!!")
 
 
-print(min(max(False, -3, -4), 2,7))
+
+
+# print(min(max(False, -3, -4), 2,7))
 
 
 
