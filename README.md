@@ -63,7 +63,7 @@
 - 059 -> Cálculo de idade, atual e em uma data aleatória
 - 060 -> Filtrando pessoas por idade e sexo
 - 061 -> Encontrar o Gentílico
-- 062 -> 
+- 062 -> Reconhecendo a primeira letra de um nome e organizando uma lista de nomes em ordem alfabética
 - 063 -> 
 - 064 -> 
 - 065 -> 
