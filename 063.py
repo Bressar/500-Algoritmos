@@ -37,7 +37,6 @@ criar_banco_de_dados()
 print("Banco de dos criado com sucesso!!")
 
 
-
 class Estudantes:
     
     db_estudantes = "database/estudantes.db"
@@ -93,12 +92,10 @@ class Estudantes:
         self.__id_estudante = str(input("Digite o ID para remover o estudante do cadastro:\n")).strip()
         try:
             with sqlite3.connect(self.db_estudantes) as conn:
-                cursor = conn.cursor()
-                
+                cursor = conn.cursor()                
                 # Verifica se o ID existe na tabela
                 cursor.execute("SELECT * FROM estudante WHERE id = ?", (self.__id_estudante,))
-                estudante = cursor.fetchone()  # Verifica se o estudante existe
-                
+                estudante = cursor.fetchone()  # Verifica se o estudante existe               
                 if estudante:
                     # O estudante foi encontrado, então removemos
                     cursor.execute("DELETE FROM estudante WHERE id = ?", (self.__id_estudante,))
@@ -106,10 +103,8 @@ class Estudantes:
                     print(f"Estudante com ID {self.__id_estudante} removido com sucesso!")
                 else:
                     # O estudante não foi encontrado
-                    print(f"ID {self.__id_estudante} não encontrado no banco de dados.")
-                
+                    print(f"ID {self.__id_estudante} não encontrado no banco de dados.")                
                 self.linha('--', 30)
-
         except sqlite3.Error as e:
             print(f"Erro ao remover estudante: {e}")
         
@@ -129,8 +124,7 @@ class Estudantes:
                 except ValueError:
                     print('Valor inválido! Tente novamente')
                     self.linha('--', 30)
-        media_final = sum(self.__notas) / len(self.__notas)  # Calcula a média
-        
+        media_final = sum(self.__notas) / len(self.__notas)  # Calcula a média       
         # Atualizando as notas no banco de dados
         try:
             with sqlite3.connect(self.db_estudantes) as con:
@@ -155,8 +149,76 @@ class Estudantes:
         except sqlite.Error as e:
             print(f"Erro ao listar estudantes: {e}")
             
-            
-    
+                       
+    def buscar_estudante(self):
+        identificador = input("Inisira o ID ou o nome que deseja acessar: ").strip().title() 
+        try:
+            with sqlite3.connect(self.db_estudantes) as con:
+                # Verifica se o identificador é um ID (4 dígitos)
+                if identificador.isdigit() and len(identificador) == 4:
+                    query = "SELECT * FROM estudante WHERE id = ?"
+                    data_frame = pd.read_sql_query(query, con, params=(identificador,))
+                else:
+                    query = "SELECT * FROM estudante WHERE nome = ?"
+                    data_frame = pd.read_sql_query(query, con, params=(identificador.title(),))
+                 # Verifica se o DataFrame está vazio
+                if data_frame.empty:
+                    print(f"Nenhum estudante encontrado com o ID ou nome '{identificador}'.")
+                else:
+                    print(data_frame.to_string(index=False))  # Exibe o DataFrame sem a numeração do pandas
+                return data_frame
+        except sqlite3.Error as e:
+            print(f"Erro ao buscar estudante: {e}")
+            return None
+
+
+    def editar_estudante(self):
+        identificador = input("Digite o ID do estudante que deseja editar: ").strip()       
+        try:
+            with sqlite3.connect(self.db_estudantes) as con:
+                cursor = con.cursor()
+                # Buscar estudante pelo ID
+                cursor.execute("SELECT * FROM estudante WHERE id = ?", (identificador,))
+                estudante = cursor.fetchone() # seleciona a row do id escolhido
+                if estudante:
+                    # Exibir os dados atuais do estudante
+                    print("Dados atuais do estudante:")
+                    print(f"ID: {estudante[0]}")
+                    print(f"Nome: {estudante[1]}")
+                    print(f"Nota 1: {estudante[2]}")
+                    print(f"Nota 2: {estudante[3]}")
+                    print(f"Nota 3: {estudante[4]}")
+                    print(f"Nota 4: {estudante[5]}")
+                    print(f"Média: {estudante[6]}")
+                    # Editar nome
+                    if input("Deseja modificar o nome? (s/n): ").strip().lower() == "s":
+                        novo_nome = input("Digite o novo nome: ").strip().title()
+                        cursor.execute("UPDATE estudante SET nome = ? WHERE id = ?", (novo_nome, identificador))
+                    # Editar notas
+                    for i in range(1, 5):
+                        if input(f"Deseja modificar a Nota {i}? (s/n): ").strip().lower() == "s":
+                            while True:
+                                try:
+                                    nova_nota = float(input(f"Digite a nova Nota {i} (0 a 10): "))
+                                    if 0 <= nova_nota <= 10:
+                                        cursor.execute(f"UPDATE estudante SET nota{i} = ? WHERE id = ?", (nova_nota, identificador))
+                                        break
+                                    else:
+                                        print("A nota deve estar entre 0 e 10.")
+                                except ValueError:
+                                    print("Valor inválido! Tente novamente.")
+                    # Calcular a nova média
+                    cursor.execute("SELECT nota1, nota2, nota3, nota4 FROM estudante WHERE id = ?", (identificador,))
+                    notas = cursor.fetchone()
+                    if notas:
+                        nova_media = sum(notas) / len(notas)
+                        cursor.execute("UPDATE estudante SET media = ? WHERE id = ?", (nova_media, identificador))
+                    con.commit()
+                    print("Dados do estudante atualizados com sucesso.")
+                else:
+                    print(f"Estudante com ID {identificador} não encontrado.")
+        except sqlite3.Error as e:
+            print(f"Erro ao editar estudante: {e}")
 
 
 # implementação
@@ -165,15 +227,13 @@ programa = Estudantes(None, None, [])
 while True:
     programa.linha('**', 30)
     print("MENU DE OPERAÇÕES\nBanco de Dados")
-    programa.linha('**', 30)
-    
+    programa.linha('**', 30)  
     option = input("""[1] Adicionar estudante
 [2] Remover estudante
 [3] Listar todos Estudantes
 [4] Apresentar um determinado estudante
 [5] Editar informações de um estudante
-[S] Sair """).strip()[0]
-    
+[S] Sair """).strip().upper() 
     programa.linha('**', 30)
     if option == "S":
         print("Encerrando o programa...")
@@ -187,9 +247,9 @@ while True:
     elif option == "3":
         programa.listar_estudantes_notas()       
     elif option == "4":
-        pass
+        programa.buscar_estudante()
     elif option == "5":
-        pass
+        programa.editar_estudante()
     else:
         print("'ERRO!' Escolha uma opção válida!")
         
@@ -198,24 +258,7 @@ while True:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+       
     """ def acrescentar_notas():
         while True:
             try:

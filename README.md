@@ -64,7 +64,7 @@
 - 060 -> Filtrando pessoas por idade e sexo
 - 061 -> Encontrar o Gentílico
 - 062 -> Reconhecendo a primeira letra de um nome e organizando uma lista de nomes em ordem alfabética
-- 063 -> 
+- 063 -> Média escolar de um aluno - usando banco de dados, sqlite
 - 064 -> 
 - 065 -> 
 - 066 -> 
