@@ -256,10 +256,8 @@ while True:
 
 
 
-
-
        
-    """ def acrescentar_notas():
+    """ def acrescentar_notas(): # Hard way...
         while True:
             try:
                 bimestre_1 = float(input('Insira a nota do 1° Bimestre: '))
