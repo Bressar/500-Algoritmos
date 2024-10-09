@@ -23,7 +23,8 @@ def criar_banco_de_dados():
         nota1 REAL,
         nota2 REAL,
         nota3 REAL,
-        nota4 REAL
+        nota4 REAL,
+        media REAL
     )
     """)
 
@@ -75,7 +76,7 @@ class Estudantes:
                 else:
                     with sqlite3.connect(self.db_estudantes) as conn:
                         cursor = conn.cursor()
-                        cursor.execute("UPDATE estudantes SET nome = ? WHERE id = ?", (self.__nome_estudante, self.__id_estudante))
+                        cursor.execute("UPDATE estudante SET nome = ? WHERE id = ?", (self.__nome_estudante, self.__id_estudante))
                         conn.commit()
                     print(f"{self.__nome_estudante} cadastrado no sistema")
                     self.linha('--', 30)   
@@ -87,28 +88,32 @@ class Estudantes:
                 print(f"Erro ao inserir nome: {e}")
                 self.linha('--', 30)    
                 
+       
     def remover_estudante(self):
-        self.__id_estudante = str(input("Digite o ID para remover o estudante do cadastro:\n")).strip().upper()
+        self.__id_estudante = str(input("Digite o ID para remover o estudante do cadastro:\n")).strip()
         try:
             with sqlite3.connect(self.db_estudantes) as conn:
-                cursor = conn.cursor()                
-                 # Verifica se o ID existe na tabela antes de tentar remover
-                cursor.execute("DELETE FROM estudante WHERE id = ?", (self.__id_estudante,))
-                estudante = cursor.fetchone()              
+                cursor = conn.cursor()
+                
+                # Verifica se o ID existe na tabela
+                cursor.execute("SELECT * FROM estudante WHERE id = ?", (self.__id_estudante,))
+                estudante = cursor.fetchone()  # Verifica se o estudante existe
+                
                 if estudante:
-                    # O estudante foi encontrado, vamos remover
-                    cursor.execute("DELETE FROM estudante WHERE id = ?", (self.id_estudante,))
+                    # O estudante foi encontrado, então removemos
+                    cursor.execute("DELETE FROM estudante WHERE id = ?", (self.__id_estudante,))
                     conn.commit()  # Confirma a remoção
-                    print(f'Estudante com ID {self.__id_estudante} removido com sucesso!')
-                    self.linha('--', 30) 
-                    # print('ID encontrado!')
+                    print(f"Estudante com ID {self.__id_estudante} removido com sucesso!")
                 else:
-                    print("ID não encontrado no banco de dados.")
-                    self.linha('--', 30)                   
+                    # O estudante não foi encontrado
+                    print(f"ID {self.__id_estudante} não encontrado no banco de dados.")
+                
+                self.linha('--', 30)
+
         except sqlite3.Error as e:
             print(f"Erro ao remover estudante: {e}")
-
-                    
+        
+                                    
     def acrescentar_notas(self):
         self.__notas = []
         for i in range(1, 5):  # Loop de 1 a 4 para cada bimestre
@@ -129,59 +134,65 @@ class Estudantes:
         # Atualizando as notas no banco de dados
         try:
             with sqlite3.connect(self.db_estudantes) as con:
-                cursor = conn.cursor()
+                cursor = con.cursor()
                 cursor.execute("""
                     UPDATE estudante
-                    SET nota1 = ?, nota2 = ?, nota3 = ?, nota4 = ?
-                    WHERE id = ?""", (*self.__notas, self.__id_estudante))
-                conn.commit()
+                    SET nota1 = ?, nota2 = ?, nota3 = ?, nota4 = ?, media = ?
+                    WHERE id = ?""", (*self.__notas,  media_final, self.__id_estudante))
+                con.commit()
         except sqlite3.Error as e:
             print(f"Erro ao atualizar notas {e}")
-                
-        return media_final
     
     
     def listar_estudantes_notas(self):
         try:
-            with sqlite3.connect(self.db) as con:
+            with sqlite3.connect(self.db_estudantes) as con:
                 query = "SELECT * FROM estudante"  # Consulta tabela no .db
                 data_frame = pd.read_sql_query(query, con)  # cria o dataframe para ser lido com o pandas
                 # Retorna a representação em string dos dados do DataFrame
-                return(data_frame.to_string(index=False)) # exibe o dataframe sem a numeração do pandas
+                print(data_frame.to_string(index=False)) # exibe o dataframe sem a numeração do pandas
+                return data_frame
         except sqlite.Error as e:
             print(f"Erro ao listar estudantes: {e}")
+            
+            
+    
 
 
 # implementação
-
 programa = Estudantes(None, None, [])
 
-
 while True:
-    programa.linha('**', 20)
+    programa.linha('**', 30)
     print("MENU DE OPERAÇÕES\nBanco de Dados")
-    programa.linha('**', 20)
-    option = input("""[A] Adicionar estudante
-[R] Remover estudante
-[N] Acrescentar Notas
-[L] Listar Notas
-[F] Apresentar média final
-[E] Editar informações
-[S] Sair """).strip().upper()[0]
-    programa.linha('**', 20)
+    programa.linha('**', 30)
+    
+    option = input("""[1] Adicionar estudante
+[2] Remover estudante
+[3] Listar todos Estudantes
+[4] Apresentar um determinado estudante
+[5] Editar informações de um estudante
+[S] Sair """).strip()[0]
+    
+    programa.linha('**', 30)
     if option == "S":
         print("Encerrando o programa...")
-        programa.linha('**', 20)
-    elif option == "A":
+        programa.linha('**', 30)
+        break
+    elif option == "1":
         programa.adicionar_aluno()
+        programa.acrescentar_notas()
+    elif option == "2":
+        programa.remover_estudante()
+    elif option == "3":
+        programa.listar_estudantes_notas()       
+    elif option == "4":
+        pass
+    elif option == "5":
+        pass
+    else:
+        print("'ERRO!' Escolha uma opção válida!")
         
-        
-
-# base_dados_estudantes.adicionar_aluno()
-# base_dados_estudantes.remover_estudante()
-# base_dados_estudantes.acrescentar_notas()
-
-
 
 
 
