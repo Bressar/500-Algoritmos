@@ -65,8 +65,12 @@
 - 061 -> Encontrar o Gentílico
 - 062 -> Reconhecendo a primeira letra de um nome e organizando uma lista de nomes em ordem alfabética
 - 063 -> Média escolar de um aluno - usando banco de dados, SQLite
-- 064 -> 
-- 065 -> 
+- 064 -> Função Insert Sort (ordenando o array em ordem crescente)
+- 065 -> Função para calcular o determinante de uma matriz quadrada 2x2
 - 066 -> 
 - 067 -> 
+- 068 -> 
+- 069 -> 
+- 070 -> 
+- 071 -> 
 
