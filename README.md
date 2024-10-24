@@ -69,7 +69,7 @@
 - 065 -> Função para calcular o determinante de uma matriz quadrada 2x2
 - 066 -> Verificar a conjugação de um verbo
 - 067 -> Desconto de INSS
-- 068 -> 
+- 068 -> Conversor de moedas / usando uma API para ter o câmbio atualizado
 - 069 -> 
 - 070 -> 
 - 071 -> 
