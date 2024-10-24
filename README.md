@@ -67,8 +67,8 @@
 - 063 -> Média escolar de um aluno - usando banco de dados, SQLite
 - 064 -> Função Insert Sort (ordenando o array em ordem crescente)
 - 065 -> Função para calcular o determinante de uma matriz quadrada 2x2
-- 066 -> 
-- 067 -> 
+- 066 -> Verificar a conjugação de um verbo
+- 067 -> Desconto de INSS
 - 068 -> 
 - 069 -> 
 - 070 -> 
