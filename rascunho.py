@@ -1,3 +1,42 @@
+
+
+# Função para visualizar dados da tabela `salas` com JSON (Banco de Dados com Lista JSON)
+def visualizar_salas():
+    print("--" * 30)
+    print("Visualização da Tabela 'salas' com listas JSON")
+    
+    # Conectar ao banco de dados das salas
+    conn = sqlite3.connect("slas.db")
+    cursor = conn.cursor()
+    
+    # Consulta para recuperar dados
+    cursor.execute("SELECT sala, alunos FROM salas ORDER BY sala")
+    salas = cursor.fetchall()
+    
+    # Exibir os dados
+    for sala in salas:
+        sala_numero = sala[0]
+        alunos = json.loads(sala[1])  # Carregar JSON de volta para lista
+        print(f"\nAlunos da Sala {sala_numero}:")
+        for aluno in sorted(alunos):
+            print(f" - {aluno}")
+    
+    # Fechar a conexão
+    conn.close()
+    print("--" * 30)
+
+
+
+
+
+
+
+
+
+
+
+
+
 import sqlite3
 
 # Criando o database e atabela diretamentye no python:

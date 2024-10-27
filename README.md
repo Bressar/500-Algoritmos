@@ -70,7 +70,7 @@
 - 066 -> Verificar a conjugação de um verbo
 - 067 -> Desconto de INSS
 - 068 -> Conversor de moedas / usando uma API para ter o câmbio atualizado
-- 069 -> Ler um nome de aluno, indicar em qual sala ele fará uma prova, gravar as informações num BD.
+- 069 -> Ler um nome de aluno, indicar em qual sala ele fará uma prova, gravar as informações num BD(JSON).
 - 070 -> 
 - 071 -> 
 
