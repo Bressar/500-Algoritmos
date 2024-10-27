@@ -57,3 +57,6 @@ imprimir_lista_sala("sala 101", sala_101)
 imprimir_lista_sala("sala 102", sala_102)
 imprimir_lista_sala("sala 103", sala_103)
 
+
+# Gravar dados das listas em um banco de dados
+
