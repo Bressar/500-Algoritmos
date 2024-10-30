@@ -61,7 +61,7 @@
 - 057 -> Cálculo de peso em cada Planeta
 - 058 -> Cálculo de Análise de Empréstimo
 - 059 -> Cálculo de idade, atual e em uma data aleatória
-- 060 -> Filtrando pessoas por idade e sexo
+- 060 -> Filtrando pessoas por idade e sexo, salvando os resultados em listas
 - 061 -> Encontrar o Gentílico
 - 062 -> Reconhecendo a primeira letra de um nome e organizando uma lista de nomes em ordem alfabética
 - 063 -> Média escolar de um aluno - usando banco de dados, SQLite
@@ -72,5 +72,13 @@
 - 068 -> Conversor de moedas / usando uma API para ter o câmbio atualizado
 - 069 -> Ler um nome de aluno, indicar em qual sala ele fará uma prova, gravar as informações num Banco de dados(JSON).
 - 070 -> Cálculo de Peso Ideal, salvando os dados em um dicionário
-- 071 -> Cadastrar a partir de uma determinada categoria em uma lista de dicionários
-
+- 071 -> Cadastro a partir de uma determinada categoria (filtar), salvar em uma lista de dicionários
+- 072 ->
+- 073 ->
+- 074 ->
+- 075 ->
+- 076 ->
+- 077 ->
+- 078 ->
+- 079 ->
+- 080 ->
