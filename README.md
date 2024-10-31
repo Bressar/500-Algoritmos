@@ -74,7 +74,7 @@
 - 070 -> Cálculo de Peso Ideal, salvando os dados em um dicionário
 - 071 -> Cadastro a partir de uma determinada categoria (filtar), salvar em uma lista de dicionários
 - 072 -> Ler um número e retornar o mês correspondente - Ler a idade e informar a classe eleitoral - usando dicionários
-- 073 -> Usando uma API, Consultar dados de clima de uma cidade e determinar se o tempo está favorável
+- 073 -> Consultar dados de clima de uma cidade usando uma API 
 - 074 ->
 - 075 ->
 - 076 ->
@@ -82,3 +82,4 @@
 - 078 ->
 - 079 ->
 - 080 ->
+- 081 ->
