@@ -73,8 +73,8 @@
 - 069 -> Ler um nome de aluno, indicar em qual sala ele fará uma prova, gravar as informações num Banco de dados(JSON).
 - 070 -> Cálculo de Peso Ideal, salvando os dados em um dicionário
 - 071 -> Cadastro a partir de uma determinada categoria (filtar), salvar em uma lista de dicionários
-- 072 ->
-- 073 ->
+- 072 -> Ler um número e retornar o mês correspondente - Ler a idade e informar a classe eleitoral - usando dicionários
+- 073 -> 
 - 074 ->
 - 075 ->
 - 076 ->
