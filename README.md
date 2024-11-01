@@ -1,6 +1,7 @@
 # 500-Algoritmos
 **500 Algoritmos em Python**
-*Atualizações toda semana*
+
+*Atualizações toda semana!*
 
 - 001 -> Fritar Ovo
 - 002 -> Mascar chiclete
@@ -79,7 +80,7 @@
 - 075 -> Usando uma funçã lambda, ler o total de pontos de 3 finalistas de um campeonato, e exibir sua colocação final.
 - 076 -> Criar uma equipe de 3 jogadores ler os pontos de cada jogadr da equipe e exibir em ordem decrescente.
          Se a soma dos 3 jogadores for > que 100, exibir média e acrescentar no ranking de equipes, se for < 100 -> equipe desclassicada
-- 077 -> Idem ao 076 - mas feito com POO
+- 077 -> Idem ao 076 - mas feito em POO
 - 078 ->
 - 079 ->
 - 080 ->
