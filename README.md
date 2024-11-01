@@ -75,7 +75,7 @@
 - 071 -> Cadastro a partir de uma determinada categoria (filtar), salvar em uma lista de dicionários
 - 072 -> Ler um número e retornar o mês correspondente - Ler a idade e informar a classe eleitoral - usando dicionários
 - 073 -> Consultar dados de clima de uma cidade usando uma API 
-- 074 ->
+- 074 -> Verificar se um cliente entra numa promoção de descontos, apresentar todos os clientes/pagtos e o total de pagtos (usando dicionários)
 - 075 ->
 - 076 ->
 - 077 ->
