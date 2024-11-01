@@ -1,8 +1,8 @@
-# Algoritmo 75
+# Algoritmo 075
 # Usando uma funçã lambda, ler o total de pontos de 3 finalistas de um campeonato, e exibir sua colocação final.
 # ex: colocação: Nome ->  X pontos
 
-# OBS: ver a versão 075_b.py , onde é possível definir qualquer número de competidores
+# OBS: ver a versão 075b.py , onde é possível definir qualquer número de competidores
 
 placar = {}
 

@@ -59,9 +59,9 @@ Possíveis Problemas:
 
     
 #print(f'!for debug!\nTodas as informações fornecidas pela API:\n {dados}') # todas as informações fornecidas pela api, for debug
-print(f'!for debug!\nTodas as informações fornecidas pela API:')
-for descricao, codigo in dados.items():
-        print(f'{descricao} -> {codigo}')
+# print(f'!for debug!\nTodas as informações fornecidas pela API:')
+# for descricao, codigo in dados.items():
+#         print(f'{descricao} -> {codigo}')
 
 
 # Dicionário com todos os códigos de países do mundo

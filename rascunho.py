@@ -1,3 +1,72 @@
+# cria equipe com 3 competidoes e seus pontos
+def criar_equipe(nome_da_equipa= "Nome da equipa"):
+    equipe = {} 
+    # Lê os nomes e pontos dos jogadores
+    for i in range(3): 
+        nome = input("Digite o nome do jogador: ").strip().title()
+        while True:
+            try:
+                pontos = int(input("Digite o número mos de pontos: "))
+                break
+            except ValueError as e:
+                print(f'{e} - Digite um número inteiro')
+        equipe[nome] = pontos
+        
+    # Ordena a equipe em ordem decrescente de pontos
+    equipe_ordenada = dict(sorted(equipe.items(), key=lambda item: item[1], reverse=True))
+    
+    # Calcula a soma dos pontos da equipe
+    total_pontos_equipes = sum(equipe_ordenada.values())
+    
+    return nome_da_equipa, equipe_ordenada, total_pontos_equipes
+
+# criando equipe e recebendo os dados
+nome_da_equipa, equipe1, total_pontos_equipe1 = criar_equipe(nome_da_equipa="Equipe 1")
+
+# apresenta a equipe ordenada
+print('--' * 30)
+print(f'Team: {nome_da_equipa}')
+print('--' * 30)
+print("Ranking de Pontos:")
+for nome, pontos in equipe1.items():
+    print(f'{nome}: {pontos} pontos')
+print('--' * 30)    
+# Apresenta a soma de todos os pontos da equipe
+print(f'Soma total dos pontos da equipe: {total_pontos_equipe1}')
+print('--' * 30)
+
+ranking_de_equipes = []
+
+if total_pontos_equipe1 > 100:
+    ranking_de_equipes.append(equipe1)
+    media_pontos_equipe = total_pontos_equipe1 / 3 # ou len(equipe_ordenada)
+    print(f"\nEquipe CALSSIFICADA! Média de pontos: {media_pontos_equipe} pontos")
+else:
+    print("\nEquipe ELIMINADA!!")
+    
+for equipe in ranking_de_equipes:
+    print(equipe, end="\n")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Função para visualizar dados da tabela `salas` com JSON (Banco de Dados com Lista JSON)
