@@ -76,7 +76,7 @@
 - 072 -> Ler um número e retornar o mês correspondente - Ler a idade e informar a classe eleitoral - usando dicionários
 - 073 -> Consultar dados de clima de uma cidade usando uma API 
 - 074 -> Verificar se um cliente entra numa promoção de descontos, apresentar todos os clientes/pagtos e o total de pagtos (usando dicionários)
-- 075 ->
+- 075 -> Usando uma funçã lambda, ler o total de pontos de 3 finalistas de um campeonato, e exibir sua colocação final.
 - 076 ->
 - 077 ->
 - 078 ->
