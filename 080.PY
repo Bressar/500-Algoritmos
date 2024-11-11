@@ -14,7 +14,7 @@ from tkinter import simpledialog
 cliente = {}
 
 # definição de interface (UI)
-ctk.set_appearance_mode('system')
+ctk.set_appearance_mode('dark') # system
 ctk.set_default_color_theme('blue')
 
 
@@ -98,14 +98,14 @@ def selecionar_impressora():
     # Janela pop-up para seleção de impressora
     popup = ctk.CTkToplevel(app)
     popup.title("Selecionar Impressora")
-    popup.geometry("300x200")
+    popup.geometry("300x150")
     
     label = ctk.CTkLabel(popup, text="Escolha uma impressora:")
-    label.pack(pady=10)
+    label.pack(pady=5)
     
     impressora_selecionada = ctk.StringVar(popup)
     impressora_menu = ctk.CTkOptionMenu(popup, variable=impressora_selecionada, values=impressoras)
-    impressora_menu.pack(pady=20)
+    impressora_menu.pack(pady=5)
     
     def confirmar_selecao():
         if impressora_selecionada.get():  # Verifica se a impressora foi selecionada
@@ -116,7 +116,7 @@ def selecionar_impressora():
 
     
     btn_confirmar = ctk.CTkButton(popup, text="Confirmar", command=confirmar_selecao)
-    btn_confirmar.pack(pady=10)
+    btn_confirmar.pack(pady=5)
     
 
 # função p/ imprimir os dados do cliente
@@ -161,34 +161,38 @@ def imprimir_dados(impressora):
 # Interface Gráfica
 app = ctk.CTk()
 app.title('Cadastro de Cartão de Crédito')
-app.geometry('400X400')
+app.geometry('340x280')  # Certifique-se que as aspas estão corretas
 
-label_nome =ctk.CTkLabel(app, text='Nome do Cliente:')
-label_nome.pack(pady=10)
+# Ajusta o padding padrão
+padding_y = 5  # Diminui o espaçamento entre os campos
+
+label_nome = ctk.CTkLabel(app, text='Nome do Cliente:')
+label_nome.grid(row=0, column=0, padx=10, pady=padding_y, sticky='e')
 entry_nome = ctk.CTkEntry(app)
-entry_nome.pack(pady=10)
+entry_nome.grid(row=0, column=1, padx=10, pady=padding_y)
 
 label_numero = ctk.CTkLabel(app, text='Número do Cartão:')
-label_numero.pack(pady=10)
+label_numero.grid(row=1, column=0, padx=10, pady=padding_y, sticky='e')
 entry_numero = ctk.CTkEntry(app)
-entry_numero.pack(pady=10)
+entry_numero.grid(row=1, column=1, padx=10, pady=padding_y)
 
 label_validade = ctk.CTkLabel(app, text='Validade (MM/AA):')
-label_validade.pack(pady=10)
+label_validade.grid(row=2, column=0, padx=10, pady=padding_y, sticky='e')
 entry_validade = ctk.CTkEntry(app)
-entry_validade.pack(pady=10)
+entry_validade.grid(row=2, column=1, padx=10, pady=padding_y)
 
 label_cvv = ctk.CTkLabel(app, text='CVV:')
-label_cvv.pack(pady=10)
+label_cvv.grid(row=3, column=0, padx=10, pady=padding_y, sticky='e')
 entry_cvv = ctk.CTkEntry(app)
-entry_cvv.pack(pady=10)
+entry_cvv.grid(row=3, column=1, padx=10, pady=padding_y)
 
+# Botão Salvar Dados
 btn_salvar = ctk.CTkButton(app, text="Salvar Dados", command=capturar_dados)
-btn_salvar.pack(pady=20)
+btn_salvar.grid(row=4, column=1, columnspan=2, pady=(20, 5))  # Espaço maior acima
 
+# Botão Imprimir Dados
 btn_imprimir = ctk.CTkButton(app, text="Imprimir Dados", command=selecionar_impressora)
-btn_imprimir.pack(pady=20)
-
+btn_imprimir.grid(row=5, column=1, columnspan=2, pady=(5, 20))  # Espaço maior abaixo
 
 app.mainloop()
 
