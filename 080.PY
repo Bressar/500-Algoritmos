@@ -5,6 +5,20 @@ import sqlite3
 import customtkinter as ctk
 from tkinter import messagebox
 import re
+import win32print
+import win32ui
+from tkinter import simpledialog
+
+
+
+
+
+
+
+
+
+
+
 
 # definição de interface (UI)
 ctk.set_appearance_mode('system')
@@ -16,7 +30,7 @@ def inicializar_banco():
     conexao = sqlite3.connect('database/clientes.db')
     cursor = conexao.cursor()   
     # criar tabela, se não existir
-    cursor.excute(''' create table if not exists clientes(
+    cursor.execute(''' create table if not exists clientes(
                         id integer primary key autoincrement,
                         nome text not null,
                         numero text not null,
@@ -32,7 +46,7 @@ def inicializar_banco():
 def adicionar_cliente(cliente):
     conexao = sqlite3.connect('database/clientes.db')
     cursor = conexao.cursor()    
-    cursor.excute("INSERT INTO clientes (nome, numero, validade, CVV) VALUES (?, ?, ?, ?),"
+    cursor.execute("INSERT INTO clientes (nome, numero, validade, CVV) VALUES (?, ?, ?, ?)",
                  (cliente['nome'], cliente['número'], cliente['data_validade'], cliente['CVV']))
     conexao.commit()
     conexao.close()
@@ -71,7 +85,7 @@ def capturar_dados():
  
     
 # função para limpar os campos de entrada
-def limpar_dados():
+def limpar_campos():
     entry_nome.delete(0, ctk.END)
     entry_numero.delete(0, ctk.END)
     entry_validade.delete(0, ctk.END)
@@ -90,3 +104,22 @@ entry_nome.pack(pady=10)
 
 label_numero = ctk.CTkLabel(app, text='Número do Cartão:')
 label_numero.pack(pady=10)
+entry_numero = ctk.CTkEntry(app)
+entry_numero.pack(pady=10)
+
+label_validade = ctk.CTkLabel(app, text='Validade (MM/AA):')
+label_validade.pack(pady=10)
+entry_validade = ctk.CTkEntry(app)
+entry_validade.pack(pady=10)
+
+label_cvv = ctk.CTkLabel(app, text='CVV:')
+label_cvv.pack(pady=10)
+entry_cvv = ctk.CTkEntry(app)
+entry_cvv.pack(pady=10)
+
+btn_salvar = ctk.CTkButton(app, text="Salvar Dados", command=capturar_dados)
+btn_salvar.pack(pady=20)
+
+app.mainloop()
+
+
