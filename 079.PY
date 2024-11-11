@@ -1,20 +1,15 @@
 # Algoritmo 079
-# Cartão de crédito - in progress
+# Cartão de crédito - parte 1 - uso da biblioteca 're'
 
 import re # para trabalhar com expressões regulares
 import sqlite3
 
 cliente = {} # trocar os dados do dicionário para um banco de dados
 
-# Treminar oo código fazendo:
-
+# No algoritmo 80, tem as seguintes implementações:
 # 1 - criar um banco de dados com todas os clientes cadastrados !!
-
 # 2-  criar interface com uma impressora da máquina windows/linux
-
 # 3 - criar interface gráfica com Custom TKinter
-
-
 
 
 print('Entre com os dados do cartão para a impressão.')

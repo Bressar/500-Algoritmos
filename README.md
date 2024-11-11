@@ -82,8 +82,8 @@
          Se a soma dos 3 jogadores for > que 100, exibir média e acrescentar no ranking de equipes, se for < 100 -> equipe desclassicada
 - 077 -> Idem ao 076 - mas feito em POO
 - 078 -> Análise de saldo médio para concessão de crédito - salvando dados em uma lista de tuplas
-- 079 ->
-- 080 ->
+- 079 -> Cartão de crédito - parte 1 - uso da biblioteca 're'
+- 080 -> Cartão de crédito - parte 2 - gravar dados em um BD e imprimi-los em uma impressora(windows)
 - 081 ->
 - 082 ->
 - 083 ->
