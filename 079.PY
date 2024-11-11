@@ -1,10 +1,19 @@
 # Algoritmo 079
-# Cartão de crédito
+# Cartão de crédito - in progress
 
 import re # para trabalhar com expressões regulares
 import sqlite3
 
 cliente = {} # trocar os dados do dicionário para um banco de dados
+
+# Treminar oo código fazendo:
+
+# 1 - criar um banco de dados com todas os clientes cadastrados !!
+
+# 2-  criar interface com uma impressora da máquina windows/linux
+
+# 3 - criar interface gráfica com Custom TKinter
+
 
 
 
@@ -57,6 +66,7 @@ while True:
     except ValueError as e:
         print(f'ERRO! {e}')
         
+
 
 print('\nCARTÂO DE CRÉDITO')
 print(f'Nome: {nome}\n'
