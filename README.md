@@ -84,7 +84,7 @@
 - 078 -> Análise de saldo médio para concessão de crédito - salvando dados em uma lista de tuplas
 - 079 -> Cartão de crédito - parte 1 - uso da biblioteca 're'
 - 080 -> Cartão de crédito - parte 2 - gravar dados em um BD e imprimi-los em uma impressora(windows)
-- 081 ->
+- 081 -> Recibo de dados de um empréstimo de livro de uma Biblioteca
 - 082 ->
 - 083 ->
 - 084 ->
