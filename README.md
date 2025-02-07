@@ -86,6 +86,6 @@
 - 080 -> Cartão de crédito - parte 2 - gravar dados em um BD e imprimi-los em uma impressora(windows)
 - 081 -> Recibo de dados de um empréstimo de livro de uma Biblioteca
 - 082 -> Ler o percurso (km), tipo de carro, retornar o consumo estimado de combustível (POO)
-- 083 ->
+- 083 -> Total de calorias de uma refeição, a partir da escolha do usuário, usando tabela fornecida
 - 084 ->
 - 085 ->
