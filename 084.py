@@ -3,6 +3,67 @@
 Algoritmo que: lê um destino de viagem, se inclui (ida e volta) informar preço da passagem 
 Usando a tabela fornecida."""
 
+# Versão refatorada
+class Viagem_Preco:
+    def __init__(self):
+        self.tabela = {
+            "Região Norte": [500, 900],
+            "Região Nordeste": [350, 650],
+            "Região Centro-Oeste": [350, 600],
+            "Região Sul": [300, 550]
+        }
+
+        while True:
+            self.calcular_viagem()
+            sair = input("Para continuar pressione [S]\nPara sair pressione qualquer tecla\n>> ").strip().upper()
+            if sair != 'S':
+                print("Encerrando o programa...")
+                self.linha()
+                break
+
+    def calcular_viagem(self):
+        opcoes = list(self.tabela.keys())  # Lista das regiões - Função List!!!
+        
+        while True:
+            self.linha()
+            print("Escolha a região de destino:")
+            for i, regiao in enumerate(opcoes, start=1):
+                print(f"[{i}] {regiao}")
+            
+            escolha = input(">> ").strip()
+            
+            if escolha.isdigit() and 1 <= int(escolha) <= len(opcoes):
+                self.destino_final = opcoes[int(escolha) - 1] #'pega a key'
+                self.ida, self.ida_volta = self.tabela[self.destino_final] # pega os 'values'
+                break
+            else:
+                print("Valor inválido! Escolha novamente.")
+
+        while True:
+            self.linha()
+            percurso = input("Escolha o percurso:\n[1] Ida\n[2] Ida e Volta\n>> ").strip()
+            if percurso == '1':
+                print(f"Valor da passagem de ida para {self.destino_final}: \nR$ {self.ida:.2f}")
+                self.linha()
+                break
+            elif percurso == '2':
+                print(f"Valor da passagem de ida-volta para {self.destino_final}: \nR$ {self.ida_volta:.2f}")
+                self.linha()
+                break
+            else:
+                print("Valor inválido! Escolha novamente.")
+
+    def linha(self):
+        print("---" * 20)
+
+if __name__ == "__main__":
+    Viagem_Preco()
+
+
+
+
+
+# Versão 1 - 
 class Viagem:
     def __init__(self):
         self.tabela = {
