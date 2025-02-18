@@ -88,6 +88,10 @@
 - 082 -> Ler o percurso (km), tipo de carro, retornar o consumo estimado de combustível (POO)
 - 083 -> Total de calorias de uma refeição, a partir da escolha do usuário, usando tabela fornecida
 - 084 -> ler um destino de viagem, se inclui (ida e volta) informar preço da passagem. Usando tabela fornecida
-- 085 -> Fornece o valor do lucro de uma venda de acordo com uma tabela
+- 085 -> Fornece o valor do lucro de uma venda de acordo com os dados de uma tabela
 - 086 -> Cálculo de IMC a partir dos dados de uma tabela 
-- 087 ->
+- 087 -> Cálculo de dosagem de remédio a partir da idade/peso, usando dados de uma tabela
+- 088 ->
+- 089 ->
+- 090 ->
+- 091 ->

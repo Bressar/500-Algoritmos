@@ -8,7 +8,8 @@ def calculo_IMC():
         [30, 'excesso de peso'],
         [35, 'obesidade'],
         [float('inf'), 'obesidade mórbida'] #Inf para cobrir qualquer valor acima de 50
-    ]
+    ] # Em Python, float('inf') representa um número infinito.
+      # (imc <= float('inf') sempre será True).
     
     while True:
         print("=-=-" * 7)
@@ -45,6 +46,5 @@ def calculo_IMC():
             print("Saindo do Programa...")
             print("--" * 30)
             break
-
 
 calculo_IMC()
