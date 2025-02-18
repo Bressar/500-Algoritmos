@@ -89,5 +89,5 @@
 - 083 -> Total de calorias de uma refeição, a partir da escolha do usuário, usando tabela fornecida
 - 084 -> ler um destino de viagem, se inclui (ida e volta) informar preço da passagem. Usando tabela fornecida
 - 085 -> Fornece o valor do lucro de uma venda de acordo com uma tabela
-- 086 ->
+- 086 -> Cálculo de IMC a partir dos dados de uma tabela 
 - 087 ->
