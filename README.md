@@ -91,7 +91,7 @@
 - 085 -> Fornece o valor do lucro de uma venda de acordo com os dados de uma tabela
 - 086 -> Cálculo de IMC a partir dos dados de uma tabela 
 - 087 -> Cálculo de dosagem de remédio a partir da idade/peso, usando dados de uma tabela
-- 088 ->
+- 088 -> De acordo com a % apresentar uma notificação, usando dados de uma tabela.
 - 089 ->
 - 090 ->
 - 091 ->
