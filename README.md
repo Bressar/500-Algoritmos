@@ -93,5 +93,9 @@
 - 087 -> Cálculo de dosagem de remédio a partir da idade/peso, usando dados de uma tabela
 - 088 -> De acordo com a % apresentar uma notificação, usando dados de uma tabela.
 - 089 -> A partir da placa de um veículo informar o mês de licenciamento, usando um dicionário ou uma tabela
-- 090 ->
-- 091 ->
+- 090 -> Fatiamento de Strings (slice)
+- 091 -> Verificar se uma data é válida -> dia/mês/ano 
+- 092 ->
+- 093 ->
+- 094 ->
+- 095 ->
