@@ -95,7 +95,7 @@
 - 089 -> A partir da placa de um veículo informar o mês de licenciamento, usando um dicionário ou uma tabela
 - 090 -> Fatiamento de Strings (slice)
 - 091 -> Verificar se uma data é válida -> dia/mês/ano 
-- 092 ->
+- 092 -> 3 algoritmos de estrutura de repetição (laço 'for') simples
 - 093 ->
 - 094 ->
 - 095 ->

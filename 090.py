@@ -8,10 +8,10 @@ while True:
 
     if len(palavra) > 3:
         if palavra.startswith('L') or palavra.startswith('D'):
-            palavra_1 = palavra[2:-1]
+            palavra_1 = palavra[2:-1] # do index 2 até o -1 (elimina o index 0 e 1  e também o -1)
             break
         else:
-            palavra_1 = palavra[1:]
+            palavra_1 = palavra[1:] # a partir do item 1 (elimina o index 0)
             break
     else:
         print('Palavra muito pequena, tente novamente')

@@ -1,7 +1,22 @@
-import sqlite3
+
+
+
+
+CONSTANTE = 'banana'
+
+CONSTANTE = 666
+
+print(type(CONSTANTE))
+
+
+
+
+# Testa o acesso aos metadados para verificar se o banco está acessível e com sintaxe correta.
+
+""" import sqlite3
 
 def testar_consulta_metadados():
-    """Testa o acesso aos metadados para verificar se o banco está acessível e com sintaxe correta."""
+
     db_path = "database/estudantes.db"
     try:
         # Conecta ao banco de dados
@@ -26,7 +41,7 @@ def testar_consulta_metadados():
 
 # Executa o teste de consulta a metadados
 testar_consulta_metadados()
-
+ """
 
 
 
