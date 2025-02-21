@@ -96,6 +96,6 @@
 - 090 -> Fatiamento de Strings (slice)
 - 091 -> Verificar se uma data é válida -> dia/mês/ano 
 - 092 -> 3 algoritmos de estrutura de repetição (laço 'for') simples
-- 093 ->
+- 093 -> Tabulação à partir dos dados de uma lista de tuplas
 - 094 ->
 - 095 ->
