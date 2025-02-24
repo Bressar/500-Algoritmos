@@ -30,6 +30,7 @@ for numero in range(100):
     print(numero, end =' ')
 
 
+
 # 004
 """ opcao = -1
 
