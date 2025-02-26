@@ -97,5 +97,10 @@
 - 091 -> Verificar se uma data é válida -> dia/mês/ano 
 - 092 -> 3 algoritmos de estrutura de repetição (laço 'for') simples
 - 093 -> Tabulação à partir dos dados de uma lista de tuplas
-- 094 ->
+- 094 -> Sistema Bancário (simples)
 - 095 ->
+- 096 ->
+- 097 ->
+- 098 ->
+- 099 ->
+- 100 ->

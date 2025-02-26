@@ -1,6 +1,6 @@
 # Algoritmo 93
 
-# Sistema Bancário (simples )
+# Sistema Bancário (simples)
 
 menu = """
 ------------
