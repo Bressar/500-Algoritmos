@@ -201,3 +201,8 @@ lista = [1]
 salario_com_bonus = salario_bonus(500, lista) # recebe lista como parametro
 print(salario_com_bonus)
 print(f'Lista original: {lista}')
+
+
+saque_diario =[10, 30, 40]
+
+print(sum(saque_diario))
