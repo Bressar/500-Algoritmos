@@ -234,10 +234,20 @@ print(lista1) """
 
 # 011 Loops in listas
 
-carros= ['gol', 'celta', 'fusca']
+""" carros= ['gol', 'celta', 'fusca']
 
 for index, carro in enumerate(carros):
     print(f'{index +1}: {carro}')
     
     
+ """
+print([n**2 if n > 6 else n for n in range(10) if n % 2 == 0])
 
+carros =('gol')
+print(isinstance(carros, tuple))
+
+# SET elimina itens duplicados
+
+listaA= [1,2,3,2,2,4]
+set([listaA])
+print(listaA)
