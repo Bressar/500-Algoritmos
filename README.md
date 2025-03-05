@@ -98,7 +98,7 @@
 - 092 -> 3 algoritmos de estrutura de repetição (laço 'for') simples
 - 093 -> Tabulação à partir dos dados de uma lista de tuplas
 - 094 -> Sistema Bancário (simples)
-- 095 ->
+- 095 -> Transformando PDF em Áudio
 - 096 ->
 - 097 ->
 - 098 ->

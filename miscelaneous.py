@@ -126,12 +126,12 @@ print('.'.join(palavra))
 
 # 008 *Args (retorna tupla) e ** Kwargs (retorna dicionário)
 
-def exibir_poema(data_extenso, *lista, **dicionario): # *args, **kwargs
+""" def exibir_poema(data_extenso, *lista, **dicionario): # *args, **kwargs
     texto = "\n".join(lista) # vai quebrar em linhas 
     meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in dicionario.items()])
     mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
     print(mensagem)
-    print('\n')
+    print('\n') """
 
 #data_extenso
 # Seráo primeiro parametro inserido na chamada função
@@ -142,17 +142,17 @@ def exibir_poema(data_extenso, *lista, **dicionario): # *args, **kwargs
 # **kwargs - dicionário
 # Será o terceiro parametro detereminado por chave/valor (dicionário)# no caso: autor e ano
 
-
+""" 
 exibir_poema("Terça-Feira, 25 de Fevereiro de 2025",
              "Zen of Python", "Beautiful is better than ugly.", "Explicit is better than implicity.", "Simple is better than complex.",
              autor= "Tim Peters",
              ano=1999)
-
+ """
 
 
 # 009 Passagem e parametros
 
-def criar_carro(*, modelo, ano, placa, marca, motor, combustivel): # parametros só por nome
+""" def criar_carro(*, modelo, ano, placa, marca, motor, combustivel): # parametros só por nome
     print(modelo, ano, placa, marca, motor, combustivel)
 
 criar_carro(modelo='Uno', ano=1986, placa=' BU-6699', marca='Fiat', motor=1.0, combustivel='alcool')
@@ -163,9 +163,9 @@ def criar_carro1(modelo, ano, placa, /, marca, motor, combustivel): # parametros
 criar_carro1('Palio', 1998,  'CE-9587', marca='Fiat', motor=1.0, combustivel='gasolina')   
 
 
-
+ """
 # Função como um objeto (parametro)
-def somar(a, b):
+""" def somar(a, b):
     return a + b
 
 def subtrair(a, b):
@@ -180,11 +180,11 @@ exibir_resultado(20, 10, subtrair)
 
 # função como atribuição de uma variável
 operacao = somar
-print(operacao(1,23))
+print(operacao(1,23)) """
 
 
 # Escopo GLOBAL
-salario = 2000
+""" salario = 2000
 
 def salario_bonus(bonus, lista):
     global salario # se não passar como argumento precisa ser uma variavel global, ou de classe self.variavel
@@ -205,4 +205,39 @@ print(f'Lista original: {lista}')
 
 saque_diario =[10, 30, 40]
 
-print(sum(saque_diario))
+print(sum(saque_diario)) """
+
+
+# 010 Lista e matrizes
+
+""" matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]   
+]
+print(matriz[0][-1])
+print(matriz[1][2])
+print(matriz[-1][-1])
+
+lista1 = [1,2,3,4,5,6,7,8,9,]
+
+print(lista1[2:]) # 3,4,5,6,7,8,9
+print(lista1[:2]) # 1, 2
+print(lista1[1:3]) # 2, 3
+print(lista1[0:3:2]) # 1, 3
+print(lista1[::]) # 1,2,3,4,5,6,7,8,9
+print(lista1[::-1]) # 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+lista_2 = lista1[::-1]
+print(lista_2)
+print(lista1) """
+
+# 011 Loops in listas
+
+carros= ['gol', 'celta', 'fusca']
+
+for index, carro in enumerate(carros):
+    print(f'{index +1}: {carro}')
+    
+    
+

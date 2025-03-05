@@ -1,5 +1,5 @@
 # Algoritmo 94
-
+# https://github.com/Bressar/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py
 # Sistema Bancário (simples)
 
 menu = """
@@ -85,7 +85,7 @@ while True:
             contador2 += 1
             linha()
             print(f'Saque {contador2}: -€ {item}')
-        linha()     
+        linha() 
         print(f'Saldo atual: € {saldo:.2f}')
         linha() 
         
