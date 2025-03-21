@@ -1,6 +1,10 @@
 # Algoritmo 97
 # Date e Time
 
+# python -m venv nome_do_ambiente
+# nome_do_ambiente\Scripts\Activate
+
+
 from datetime import date, datetime, time, timedelta
 
 
@@ -68,3 +72,42 @@ print('---' * 30)
 
 # Formatando datas e horários
 
+""" print(data_atual.strftime("%d/%m/%Y %H:%M")) """
+
+data_hora_atual = datetime.now()
+data_hora_str = '2025-03-20 18:50'
+mascara_ptbr = "%d/%m/%Y %H:%M"
+
+mascara_en = "%Y-%m-%d %H:%M"  # Corrigido os separadores
+
+print(data_hora_atual.strftime(mascara_ptbr))  # Corrigido o nome da variável
+
+data_convertida  = datetime.strptime(data_hora_str, mascara_en)
+print(data_convertida)
+print(type(data_convertida))
+
+print('---' * 30)
+
+# Timezone com pytz (melhor maneira)
+import pytz
+from datetime import datetime, timezone, timedelta
+
+data = datetime.now(pytz.timezone('Europe/Oslo'))
+data2 = datetime.now(pytz.timezone('America/Sao_Paulo'))
+data3 = datetime.now(pytz.timezone('Europe/Lisbon'))
+
+print(f'Oslo: {data}\nSão Paulo: {data2}\nLisboa: {data3}')
+
+
+print('---' * 30)
+# Timezone usando só o datetime
+
+data_oslo = datetime.now(timezone(timedelta(hours=2), "OSL")) # valor do nome é opcional +2
+data_sp = datetime.now(timezone(timedelta(hours=-3))) # -3
+
+print(f'Oslo: {data_oslo}\nSão Paulo: {data_sp}')
+
+# convertendo para outro timezone
+""" d_utc = d.astimezone(datetime.timezone.utc)
+print(d_utc)
+ """
