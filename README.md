@@ -99,8 +99,8 @@
 - 093 -> Tabulação à partir dos dados de uma lista de tuplas
 - 094 -> Sistema Bancário (simples)
 - 095 -> Transformando PDF em Áudio
-- 096 ->
-- 097 ->
+- 096 -> Biblioteca Table
+- 097 -> Date e Time - usos
 - 098 ->
 - 099 ->
 - 100 ->
