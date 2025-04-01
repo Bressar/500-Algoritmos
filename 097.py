@@ -1,5 +1,5 @@
 # Algoritmo 97
-# Date e Time
+# DateTime
 
 # python -m venv nome_do_ambiente
 # nome_do_ambiente\Scripts\Activate
