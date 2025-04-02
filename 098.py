@@ -308,7 +308,7 @@ def exibir_extrato(clientes):
     print("\n================ EXTRATO ================")
     extrato = ""
     tem_transacao = False
-    for transacao in conta.historico.gerar_relatorio():
+    for transacao in conta.historico.gerar_relatorio(tipo_transacao='saque'): # só exibe no extrato se houve 'saque'
         tem_transacao = True
         extrato += f"\n{transacao['tipo']}:\n\tR$ {transacao['valor']:.2f}"
 
