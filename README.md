@@ -101,7 +101,7 @@
 - 095 -> Transformando PDF em Áudio
 - 096 -> Biblioteca Table
 - 097 -> Date e Time - usos
-- 098 -> Sistema Bancário com DateTime
+- 098 -> Sistema Bancário com funções 
 - 099 ->
 - 100 ->
 - 101 ->
@@ -109,3 +109,6 @@
 - 103 ->
 - 104 ->
 - 105 ->
+- 106 ->
+- 107 ->
+- 108 ->
