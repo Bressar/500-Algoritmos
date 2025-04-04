@@ -1,88 +1,117 @@
 # Algoritmo 99
 # # transacoes_bancarias
-''' 
-Para ler e escrever dados em Python, utilizamos as seguintes funções: 
-- input: lê UMA linha com dado(s) de Entrada do usuário;
-- print: imprime um texto de Saída (Output), pulando linha.  
-'''
+
+from datetime import datetime
+
+transacoes = [0]
+saldo = 0
+valor = 0
+agora = datetime.today()
+
+def linha(caractere ='', numero=None):
+    print(caractere * numero)
+
+def calcular_saldo():
+    while True:
+        linha('--',10)
+        operacao = input('''Escolha a função:
+        [D] Depósito
+        [R] Retirada
+        [S] Saldo
+        [X] Sair\n''').strip().upper()
+        linha('--',10)
+        
+        if operacao == 'D':
+            valor = float(input('Digite o valor\nR$ '))
+            linha('--',10)
+            if valor > 0:
+                transacoes.append(valor)
+            else:
+                print('Número inválido!')
+        
+        elif operacao == 'R':
+            valor = float(input('Digite o valor\nR$ '))
+            linha('--',10)
+            if valor > 0:
+                valor = valor * -1
+                transacoes.append(valor)
+            else:
+                print('Número inválido!')
+        
+        elif operacao == "S":
+            linha('==', 15)
+            saldo = sum(transacoes) 
+            print(f'Saldo: R$ {saldo:.2f}\n{agora}')
+            linha('==', 15)
+        
+        elif operacao == 'X':
+            linha('--', 15)
+            print('Encerrando o programa...')
+            linha('--', 15)
+            break 
+
+        else:
+            print('Operação inválida,\nTente novamente!')
+
+calcular_saldo()
+
+
+# Versão simples:
+
 def calcular_saldo(transacoes):
     saldo = 0
 
-    # TODO: Itere sobre cada transação na lista:
-    
-        # TODO: Adicione o valor da transação ao saldo
-        
+    # Itera sobre cada transação e soma ao saldo
+    for transacao in transacoes:
+        saldo += transacao
 
-    # TODO: Retorne o saldo formatado em moeda brasileira com duas casas decimais:
-  
-transacoes = [0]
-saldo = 0
-valor= 0
+    # Retorna o saldo formatado com duas casas decimais
+    return f"Saldo: R$ {saldo:.2f}"
 
-while True:
-    operacao = input('''Escolha a função:
-    [D] Depósito
-    [R] Retirada
-    [S] Saldo\n''').strip().upper()
-    
-    if operacao == "S":
-      print(f'Saldo: {saldo:.2f} €')
-      break
-  
-    elif operacao == 'D':
-        valor = float(input('Digite o valor\n'))
-        transacoes.append(valor)
-       #print(transacoes)
-        break
-    
-    elif operacao == 'R':
-        valor = float(input('Digite o valor\n'))
-        valor = valor * -1
-        transacoes.append(valor)
-       #print(transacoes)
-        break
-
-    else:
-        print('Operação inválida, tente novamente!')
-
-print(operacao)
-
-saldo = sum(transacoes)   
-print(f'Saldo: {saldo:.2f} €')  
-#rint(transacoes)
-
-""" entrada_usuario = float(input('Digite '))
-
-entrada_usuario = entrada_usuario.strip("[]").replace(" ", "")
-
-transacoes = [float(valor) for valor in entrada_usuario.split(",")]
-
-# TODO: Calcule o saldo com base nas transações informadas:
-resultado = calcular_saldo(transacoes)
-
-print(resultado) """
-
-
-
-
-""" def calcular_saldo(transacoes):
-    saldo = 0
-
-    # TODO: Itere sobre cada transação na lista:
-    
-        # TODO: Adicione o valor da transação ao saldo
-        
-
-    # TODO: Retorne o saldo formatado em moeda brasileira com duas casas decimais:
-    
-
+# Lê a entrada do usuário
 entrada_usuario = input()
 
+# Remove colchetes e espaços, depois separa os valores
 entrada_usuario = entrada_usuario.strip("[]").replace(" ", "")
 
+# Converte os valores para float
 transacoes = [float(valor) for valor in entrada_usuario.split(",")]
 
-# TODO: Calcule o saldo com base nas transações informadas:
+# Calcula o saldo
 resultado = calcular_saldo(transacoes)
 
-print(resultado) """
+# Imprime o resultado
+print(resultado)
+
+# Versão extendida do código:
+
+
+def filtrar_transacoes(transacoes, limite):
+    transacoes_filtradas = []
+
+    # Itera sobre cada transação
+    for transacao in transacoes:
+        # Verifica se o valor absoluto é maior que o limite
+        if abs(transacao) > limite:
+            transacoes_filtradas.append(transacao)
+
+    # Retorna a lista de transações filtradas
+    return transacoes_filtradas
+
+# Lê a entrada
+entrada = input()
+
+# Divide a string da entrada em duas partes: lista e limite
+entrada_transacoes, limite = entrada.split("],")
+entrada_transacoes = entrada_transacoes.strip("[]").replace(" ", "")
+limite = float(limite.strip())
+
+# Converte os valores da lista de transações
+transacoes = [int(valor) for valor in entrada_transacoes.split(",")]
+
+# Filtra as transações com base no limite
+resultado = filtrar_transacoes(transacoes, limite)
+
+# Imprime no formato correto
+print(f"Transações: {resultado}")
+
