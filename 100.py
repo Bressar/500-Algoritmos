@@ -61,3 +61,50 @@ b2.buzinar() # Bike.buzinar(b2)
 print(b2) # imprime o metodo __str__  se ele não existisse mostraria apenas a localização do objeto na memória
 
 
+print('---' * 30)
+
+
+# exemplo 2
+
+# Construtores e destrutores
+
+class Cachorro:
+    def __init__(self, nome, cor, acordado=True):
+        print("Inicializando a classe...")
+        self.nome = nome
+        self.cor = cor
+        self.acordado = acordado
+        
+    def __del__(self):# destrutor
+        print("Removendo a instância da classe") 
+        
+    def falar(self):
+        print("auau")
+        
+
+def criar_cachorro():
+    c = Cachorro("Buck", "Marrom", False)  
+    print(c.nome)  
+        
+        
+c = Cachorro("Huskie", "Branco")
+c.falar()
+
+print("olá")
+print("olá")
+
+del c # para eliminar antes do destrutor
+
+print("olá")
+print("olá")
+        
+criar_cachorro()
+# só remove no final!!
+
+       
+""" class Cachorro:
+    def __del__(self):
+        print("Destruindo a instância")    
+        
+c = Cachorro()
+del c   """
