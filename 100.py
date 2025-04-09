@@ -108,3 +108,5 @@ criar_cachorro()
         
 c = Cachorro()
 del c   """
+
+# Exemplo 3 
