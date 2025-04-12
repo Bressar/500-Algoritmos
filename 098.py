@@ -1,5 +1,5 @@
 # Algoritmo 98
-# Sistema Bancário com DateTime
+# Sistema Bancário em POO
 # 
 import textwrap
 from abc import ABC, abstractmethod
