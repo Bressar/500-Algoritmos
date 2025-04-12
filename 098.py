@@ -1,8 +1,8 @@
-# Algoritmo 97
+# Algoritmo 98
 # Sistema Bancário com DateTime
 # 
 import textwrap
-from abc import ABC, abstractclassmethod, abstractproperty
+from abc import ABC, abstractmethod
 from datetime import datetime
 
 
@@ -178,11 +178,12 @@ class Historico:
 
 class Transacao(ABC):
     @property
-    @abstractproperty
+    @abstractmethod
     def valor(self):
         pass
 
-    @abstractclassmethod
+    @classmethod
+    @abstractmethod
     def registrar(self, conta):
         pass
 
@@ -349,7 +350,7 @@ def criar_conta(numero_conta, clientes, contas):
         print("\n@@@ Cliente não encontrado, fluxo de criação de conta encerrado! @@@")
         return
 
-    # NOTE: O valor padrão de limite de saques foi alterado para 50 saques
+    # NOTE: Padrão de limite de saques foi alterado para 50 saques
     conta = ContaCorrente.nova_conta(cliente=cliente, numero=numero_conta, limite=500, limite_saques=50)
     contas.append(conta)
     cliente.contas.append(conta)
@@ -397,3 +398,4 @@ def main():
 
 
 main()
+
