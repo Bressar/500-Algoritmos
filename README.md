@@ -104,8 +104,8 @@
 - 098 -> Sistema Bancário em POO
 - 099 -> Transações Bancárias só com funções
 - 100 -> Review de POO
-- 101 -> 
-- 102 ->
+- 101 -> Mais estruturas de repetição (Arrays)
+- 102 -> Mais estruturas de repetição (Listas)
 - 103 ->
 - 104 ->
 - 105 ->
