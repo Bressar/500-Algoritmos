@@ -1,6 +1,8 @@
 # Algoritmo 102
 # Mais estruturas de repetição (Listas)
 
+from math import sqrt
+
 def lista1():
     for i in range(1, 101): # de 1 a 100
         print(i, end=" ")
@@ -41,12 +43,32 @@ def lista6():
         print(i, end=" ")
     print("\n")
     
-lista6()
+#lista6()
 
 
-def lista6():
-    for i in range(120, 301):#intervalo entre 120 e 300
+def lista7():
+    soma= 0
+    for i in range(1, 101):#somatorio de 1 a 100
         print(i, end=" ")
+        soma += i
+    print(f"\nSomatória de 1 a 100: {soma}\n")
+    
+#lista7()
+
+def lista8(): # Entrar com 10 números e imprimir a metade de cada número.
+    for i in range(1, 11):
+        numero= float(input("Digite número: "))
+        print(f"Metade: {numero / 2}")
     print("\n")
     
-lista6()
+#lista8()
+
+def lista9(): # Entrar com 5 números e imprimir a raiz quadrada de cada número.
+    for i in range(1, 6):
+        numero= float(input("Digite número: "))
+        raiz = sqrt(numero)
+        print(f"Raiz: {raiz}")
+    print("\n")
+    
+lista9()
+
