@@ -1,3 +1,6 @@
+# Algoritmo 105
+# Cálculo de descontos usando um dicionário
+
 print("Iniciando o programa...")
 
 preco_str = input("Digite o preço: ")

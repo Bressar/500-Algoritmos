@@ -106,8 +106,13 @@
 - 100 -> Review de POO
 - 101 -> Mais estruturas de repetição (Arrays)
 - 102 -> Mais estruturas de repetição (Listas)
-- 103 ->
-- 104 ->
-- 105 ->
+- 103 -> Loop for, verificação de entradas (nome, sexo, idade)
+- 104 -> Validação de e-mail (verificar se é um e-mail válido)
+- 105 -> Cálculo de descontos usando um dicionário
 - 106 ->
-
+- 107 ->
+- 108 ->
+- 109 ->
+- 110 ->
+- 111 ->
+- 112 ->
