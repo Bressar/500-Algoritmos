@@ -109,8 +109,8 @@
 - 103 -> Loop for, verificação de entradas (nome, sexo, idade)
 - 104 -> Validação de e-mail (verificar se é um e-mail válido)
 - 105 -> Cálculo de descontos usando um dicionário
-- 106 ->
-- 107 ->
+- 106 -> Ordenar lista de pacientes por idade e prioridade
+- 107 -> Sistema de reservas de uma pousada
 - 108 ->
 - 109 ->
 - 110 ->
