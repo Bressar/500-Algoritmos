@@ -111,8 +111,8 @@
 - 105 -> Cálculo de descontos usando um dicionário
 - 106 -> Ordenar lista de pacientes por idade e prioridade
 - 107 -> Sistema de reservas de uma pousada
-- 108 ->
-- 109 ->
+- 108 -> Carrinho de compras que permita adicionar produtos e calcular o valor total da compra
+- 109 -> 
 - 110 ->
 - 111 ->
 - 112 ->
