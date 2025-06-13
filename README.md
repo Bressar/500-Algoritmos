@@ -112,8 +112,8 @@
 - 106 -> Ordenar lista de pacientes por idade e prioridade
 - 107 -> Sistema de reservas de uma pousada
 - 108 -> Carrinho de compras que permita adicionar produtos e calcular o valor total da compra
-- 109 -> 
-- 110 ->
+- 109 -> organizador de eventos que divida os participantes em grupos de acordo com o tema escolhido
+- 110 -> POO - verificar se um carro é considerado antigo (mais de 20 anos)
 - 111 ->
 - 112 ->
 - 113->

@@ -17,7 +17,7 @@ for _ in range(n):
 #print("Lista: " + lista)# For debug
 
 for entrada in entradas:
-    nome, evento = entrada.split()
+    nome, evento = entrada.split(", ")
     if evento not in eventos:
         eventos[evento] = []
     eventos[evento].append(nome)
