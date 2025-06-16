@@ -114,7 +114,7 @@
 - 108 -> Carrinho de compras que permita adicionar produtos e calcular o valor total da compra
 - 109 -> organizador de eventos que divida os participantes em grupos de acordo com o tema escolhido
 - 110 -> POO - verificar se um carro é considerado antigo (mais de 20 anos)
-- 111 ->
+- 111 -> Pedido em um restaurante, com os itens pedidos e um método para o valor total da conta
 - 112 ->
 - 113->
 - 114 ->
@@ -126,3 +126,4 @@
 - 120 ->
 - 121 ->
 - 122 ->
+
