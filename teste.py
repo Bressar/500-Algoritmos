@@ -5,4 +5,4 @@ print(bool("False"))
 print(bool("Banana"))
 
 x = True + True + [1]
-print(x) 
+print(x) # error
