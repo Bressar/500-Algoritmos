@@ -1,5 +1,4 @@
 # Algoritmo 111
-
 """ classe Pedido que represente um pedido em um restaurante, contendo os itens pedidos e um método para calcular o valor total da conta. """
 
 class Pedido:
