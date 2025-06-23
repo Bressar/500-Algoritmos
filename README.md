@@ -115,8 +115,8 @@
 - 109 -> organizador de eventos que divida os participantes em grupos de acordo com o tema escolhido
 - 110 -> POO - verificar se um carro é considerado antigo (mais de 20 anos)
 - 111 -> Pedido em um restaurante, com os itens pedidos e um método para o valor total da conta
-- 112 ->
-- 113->
+- 112 -> Passagem de parâmetros em funções (função executa função) - exemplos
+- 113 -> Inner functions - funções internas - exemplos
 - 114 ->
 - 115 ->
 - 116 ->
