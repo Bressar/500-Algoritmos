@@ -117,10 +117,10 @@
 - 111 -> Pedido em um restaurante, com os itens pedidos e um método para o valor total da conta
 - 112 -> Passagem de parâmetros em funções (função executa função) - exemplos
 - 113 -> Inner functions - funções internas - exemplos
-- 114 ->
-- 115 ->
-- 116 ->
-- 117 ->
+- 114 -> Decorador simples (Python)
+- 115 -> Decorador com argumentos - args e kwargs
+- 116 -> Decoradores com Introspecção - functools.wrap
+- 117 -> 
 - 118 ->
 - 119 ->
 - 120 ->
