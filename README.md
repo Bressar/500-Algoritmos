@@ -120,7 +120,7 @@
 - 114 -> Decorador simples (Python)
 - 115 -> Decorador com argumentos - args e kwargs
 - 116 -> Decoradores com Introspecção - functools.wrap
-- 117 -> 
+- 117 -> Métodos Iteradores - 'iter' 'next'
 - 118 ->
 - 119 ->
 - 120 ->
