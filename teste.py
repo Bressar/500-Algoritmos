@@ -1,4 +1,8 @@
+x = "clcoding"
+print(x * 0)
 
+""" s = "python"
+print(s.find("z"))
 
 print(bool([]))
 
@@ -9,6 +13,6 @@ print(bool("False"))
 print(bool("Banana"))
 
 x = True + True + [1]
-print(x) # error
+print(x) # error """
 
 
