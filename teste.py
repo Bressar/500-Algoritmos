@@ -1,6 +1,8 @@
 x = "clcoding"
 print(x * 0)
 
+print("hello".capitalize())
+
 """ s = "python"
 print(s.find("z"))
 
