@@ -63,7 +63,7 @@ O gerador produz valores sob demanda, um por vez, de forma eficiente em memória
 
 
 # Exemplo 1
-#import requests
+import requests
 
 def fetch_products(api_url, max_pages=100):
     page = 1
