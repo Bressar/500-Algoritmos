@@ -122,8 +122,8 @@
 - 116 -> Decoradores com Introspecção - functools.wrap
 - 117 -> Métodos Iteradores - 'iter' 'next'
 - 118 -> Geradores - Recuperando dados de uma API - 'yield'
-- 119 ->
-- 120 ->
+- 119 -> Sistema bancário POO com decoradores
+- 120 -> Manipulação de arquivos em Python - Read e Write
 - 121 ->
 - 122 ->
 - 123 ->
